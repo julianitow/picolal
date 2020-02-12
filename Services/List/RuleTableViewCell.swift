@@ -10,6 +10,12 @@ import UIKit
 
 class RuleTableViewCell: UITableViewCell {
 
+    @IBOutlet var cell: UIView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var contentLabel: UILabel!
+    @IBOutlet var authorLabel: UILabel!
+    @IBOutlet var categoryLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +27,11 @@ class RuleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+    }
+    
+    class func initialize(name: String, content: String, author: String){
+        
+    }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class RuleDetailsViewController: UIViewController {
 
+    var rule: Rule!
+    
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
@@ -18,13 +20,16 @@ class RuleDetailsViewController: UIViewController {
     var authorWebService: AuthorWebService = AuthorWebService()
     var categoryWebService: CategoryWebService = CategoryWebService()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft
+    }
 
-        // Do any additional setup after loading the view.
+    override var shouldAutorotate: Bool {
+        return true
     }
     
-    func newInstance(rule: Rule){
+    override func viewDidLoad() {
+        super.viewDidLoad()
         self.nameLabel.text = rule.name
         self.contentLabel.text = rule.content
         authorWebService.getAuthor(id: rule.author, completion: { author in
@@ -37,6 +42,15 @@ class RuleDetailsViewController: UIViewController {
                 self.categoryLabel.text = category[0].name
             }
         })
+        // Force landscape mode
+        let landscapeLeftValue = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(landscapeLeftValue, forKey: "orientation")
+    }
+    
+    class func newInstance(rule: Rule) -> RuleDetailsViewController{
+        let ruleDetailsViewController = RuleDetailsViewController()
+        ruleDetailsViewController.rule = rule
+        return ruleDetailsViewController
     }
 
 }

@@ -9,11 +9,16 @@
 import Foundation
 
 class User {
-    var name: String!
-    var email: String!
+    var id: Int
+    var name: String
+    var email: String
     
-    init(name: String, email: String) {
+    init(id: Int, name: String, email: String) {
+        self.id = id
         self.name = name
         self.email = email
+    }
+    var description: String {
+        return "{\(self.id), \(self.name), \(self.email)}"
     }
 }

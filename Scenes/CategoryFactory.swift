@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class CategoryFactory {
+    static func categoryFrom(dictionnary: [String: Any]) -> Category? {
+        guard let name = dictionnary["name"] as? String else {
+            return nil
+        }
+        return Category(name: name)
+    }
+}

@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Category: CustomStringConvertible {
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    var description: String {
+        return "{\(self.name)}"
+    }
+}

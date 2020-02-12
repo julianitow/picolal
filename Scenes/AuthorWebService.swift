@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+class AuthorWebService {
+    
+    func getAuthor(id: Int, completion: @escaping ([Author]) -> Void) -> Void {
+        guard let authorURL = URL(string: "http://192.168.1.24:8080/api/author/" + String(id)) else {
+            return;
+        }
+        let task = URLSession.shared.dataTask(with: authorURL, completionHandler: { (data: Data?, res, err) in
+            guard let bytes = data,
+                  err == nil,
+                let json = try? JSONSerialization.jsonObject(with: bytes, options: .fragmentsAllowed) as? [Any] else {
+                    DispatchQueue.main.sync {
+                        completion([])
+                    }
+                return
+            }
+            let author = json.compactMap { (obj) -> Author? in
+                guard let dict = obj as? [String: Any] else {
+                    return nil
+                }
+                return AuthorFactory.authorFrom(dictionnary: dict)
+            }
+            DispatchQueue.main.sync {
+                completion(author)
+            }
+        })
+        task.resume()
+    }
+}

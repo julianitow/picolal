@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class Rule: CustomStringConvertible {
+    var author: Int
+    var category: Int
+    var name: String
+    var content: String
+    
+    
+    init(name: String, content: String, author: Int, category: Int) {
+        self.name = name
+        self.content = content
+        self.author = author
+        self.category = category
+    }
+    
+    var description: String {
+        return "\(self.name), \(self.content), \(self.author), \(self.category)\n"
+    }
+}
