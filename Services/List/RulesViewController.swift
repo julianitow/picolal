@@ -24,6 +24,7 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.rulesTableView.register(UINib(nibName: "RuleTableViewCell", bundle: nil), forCellReuseIdentifier: "RuleCell")
         self.rulesTableView.dataSource = self
         self.rulesTableView.delegate = self
+        self.rulesTableView.backgroundColor = UIColor(displayP3Red: (25/255), green: (118/255), blue: (210/255), alpha: 0)
         // Do any additional setup after loading the view.
     }
     

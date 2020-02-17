@@ -56,7 +56,7 @@ class Database {
     }
     
     // INSERT/CREATE operation prepared statement
-    func prepareInsertEntryStmt() -> Int {
+    func prepareInsertEntryStmt() -> Int32 {
         guard insertEntryStmt == nil else { return SQLITE_OK }
         let sql = "INSERT INTO Users (id, Name, Email) VALUES (?,?,?)"
         //preparing the query

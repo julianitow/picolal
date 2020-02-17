@@ -25,48 +25,56 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-lF-YWA">
-                    <rect key="frame" x="111" y="194" width="192" height="40"/>
-                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="34"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QN8-WJ-6cl">
-                    <rect key="frame" x="148" y="433" width="117" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="QN8-WJ-6cl">
+                    <rect key="frame" x="66.999999999999886" y="417.34262029062279" width="281" height="64.000000000000043"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="50"/>
-                    <state key="normal" title="Play"/>
+                    <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="48"/>
+                    <state key="normal" title="Play" backgroundImage="button_bg">
+                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                    </state>
                     <connections>
                         <action selector="showRulesAction:" destination="-1" eventType="touchUpInside" id="Kft-Rg-ack"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-lF-YWA">
+                    <rect key="frame" x="117" y="194" width="180.5" height="40"/>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="34"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picolal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-vt-Rgf">
-                    <rect key="frame" x="131" y="242" width="152" height="54"/>
+                    <rect key="frame" x="140.5" y="242" width="133.5" height="54"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="45"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                     <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdb-LX-Eiu">
-                    <rect key="frame" x="147.5" y="584" width="119" height="38"/>
-                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="22"/>
-                    <state key="normal" title="My account"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="5AM-6c-geN">
+                    <rect key="frame" x="67" y="514" width="281" height="64.000000000000043"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
+                    <state key="normal" title="My account" backgroundImage="button_bg">
+                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                    </state>
                     <connections>
-                        <action selector="myAccountAction:" destination="-1" eventType="touchUpInside" id="i8z-g2-5Qs"/>
+                        <action selector="myAccountAction:" destination="-1" eventType="touchUpInside" id="PZk-9a-B21"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LTv-lF-YWA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAp-au-8E6"/>
                 <constraint firstItem="C27-vt-Rgf" firstAttribute="top" secondItem="LTv-lF-YWA" secondAttribute="bottom" constant="8" id="HC0-8j-kiM"/>
-                <constraint firstItem="tdb-LX-Eiu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oye-Lc-7fQ"/>
                 <constraint firstItem="LTv-lF-YWA" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="150" id="Twr-GX-Rt1"/>
                 <constraint firstItem="C27-vt-Rgf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uvm-l0-Y8s"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tdb-LX-Eiu" secondAttribute="bottom" constant="240" id="jTs-Ml-YLS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
         </view>
     </objects>
+    <resources>
+        <image name="button_bg" width="1110" height="237"/>
+    </resources>
 </document>
