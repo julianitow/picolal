@@ -10,7 +10,7 @@ import Foundation
 import SQLite3
 import os.log
 
-class Database {
+/*class Database {
     let dbURL: URL
     var db: OpaquePointer?
     
@@ -247,4 +247,4 @@ class SqliteError : Error {
     init(error: Int32) {
         self.error = error
     }
-}
+}*/

@@ -7,8 +7,13 @@
 //
 
 import Foundation
+struct Category : Codable {
+    let id       : Int?
+    let name     : String?
+}
 
-class Category: CustomStringConvertible {
+
+/*class Category: CustomStringConvertible {
     var name: String
     
     init(name: String) {
@@ -18,4 +23,4 @@ class Category: CustomStringConvertible {
     var description: String {
         return "{\(self.name)}"
     }
-}
+}*/

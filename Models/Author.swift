@@ -7,8 +7,13 @@
 //
 
 import Foundation
+struct Author : Codable {
+    let id       : Int?
+    let name     : String?
+    let email    : String?
+}
 
-class Author: CustomStringConvertible {
+/*class Author: CustomStringConvertible {
     var id: Int
     var name: String
     var email: String
@@ -38,4 +43,4 @@ class Author: CustomStringConvertible {
     func getEmail() -> String {
         return self.email
     }
-}
+}*/

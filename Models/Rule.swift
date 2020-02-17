@@ -8,7 +8,15 @@
 
 import Foundation
 
-class Rule: CustomStringConvertible {
+struct Rule : Codable{
+    let id       : Int?
+    let name     : String
+    let content  : String
+    let category : Category
+    let author   : Author
+}
+
+/*class Rule: CustomStringConvertible {
     var author: Int
     var category: Int
     var name: String
@@ -25,4 +33,4 @@ class Rule: CustomStringConvertible {
     var description: String {
         return "\(self.name), \(self.content), \(self.author), \(self.category)\n"
     }
-}
+}*/
