@@ -13,16 +13,20 @@ class Rule: CustomStringConvertible {
     var category: Int
     var name: String
     var content: String
+    var rate: Int
+    var drinks: Int
     
     
-    init(name: String, content: String, author: Int, category: Int) {
+    init(name: String, content: String, author: Int, category: Int, rate: Int, drinks: Int) {
         self.name = name
         self.content = content
         self.author = author
         self.category = category
+        self.rate = rate
+        self.drinks = drinks
     }
     
     var description: String {
-        return "\(self.name), \(self.content), \(self.author), \(self.category)\n"
+        return "\(self.name), \(self.content), \(self.author), \(self.category), \(self.rate), \(self.drinks)\n"
     }
 }

@@ -72,5 +72,33 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
         self.navigationController?.pushViewController(ruleDetails, animated: true)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
+    }
+    
+    func sortRulesByName(){
+        self.rules.sort(by: { $0.name.lowercased() < $1.name.lowercased() })
+        self.rulesTableView.reloadData()
+    }
+    
+    func sortRulesByCategoryName(){
+        self.rules.sort(by: { $0.category.description.lowercased() < $1.category.description.lowercased() })
+        self.rulesTableView.reloadData()
+    }
+    
+    func sortRuleByRate(){
+        self.rules.sort(by: { $0.rate < $1.rate })
+        self.rulesTableView.reloadData()
+    }
+    
+    func sortRulesByDrinks(){
+        self.rules.sort(by: { $0.drinks < $1.drinks })
+        self.rulesTableView.reloadData()
+    }
 
 }

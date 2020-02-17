@@ -49,8 +49,18 @@ class GalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("test")
         self.ruleWebService.getRules { (rules) in
             
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            print("switch to portrait")
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
         }
     }
 }
