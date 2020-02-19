@@ -17,6 +17,12 @@ class GalleryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            print("switch to portrait")
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -35,7 +41,6 @@ class GalleryViewController: UIViewController {
         print("myAccount");
         var author: Author
         authorWebService.getAuthor(id: 1) { (Author) in
-            print(Author[0])
             let user: User = User(id: Author[0].id, name: Author[0].name, email: Author[0].email)
             self.database.create(user: user)
             let user2 = try?self.database.read(id: user.id)
@@ -43,6 +48,8 @@ class GalleryViewController: UIViewController {
             /*self.database.create(user: user)
             let user2 = try?self.database.read(email: "guillan.julien@live.com")
              print(user2?.description)*/
+            let myAccountPage = myAccountViewController.newInstance()
+            self.navigationController?.pushViewController(myAccountPage, animated: true)
             
         }
     }
@@ -52,15 +59,6 @@ class GalleryViewController: UIViewController {
         print("test")
         self.ruleWebService.getRules { (rules) in
             
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            print("switch to portrait")
-            let portrait = UIInterfaceOrientation.portrait.rawValue
-            UIDevice.current.setValue(portrait, forKey: "orientation")
         }
     }
 }
