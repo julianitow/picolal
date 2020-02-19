@@ -101,7 +101,12 @@ class RuleDetailsViewController: UIViewController {
             self.rules.remove(at: indexRule)
             display(rule: rule, player: player)
         } else {
-            self.contentLabel.text = "Finished"
+            self.categoryLabel.text = ""
+            self.authorLabel.text = ""
+            self.nameLabel.text = ""
+            self.contentLabel.text = ""
+            self.nameLabel.text = ""
+            self.playerLabel.text = "Finished"
         }
     }
     
