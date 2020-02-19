@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */; };
+		4D444B3A23FDBB12003FFFEE /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3923FDBB12003FFFEE /* assets.xcassets */; };
+		4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */; };
+		4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */; };
 		4D7CC93623EC4C0000423793 /* RuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */; };
 		4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */; };
 		4D7CC93923EC807500423793 /* AuthorWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC93823EC807500423793 /* AuthorWebService.swift */; };
@@ -24,7 +27,6 @@
 		4D89289123EEFE9900E73AE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D89289023EEFE9900E73AE9 /* User.swift */; };
 		4DB0FB7B23C23B250043E6E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */; };
 		4DB0FB7D23C23B250043E6E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */; };
-		4DB0FB8423C23B260043E6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0FB8323C23B260043E6E8 /* Assets.xcassets */; };
 		4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0FB8523C23B260043E6E8 /* LaunchScreen.storyboard */; };
 		4DB0FB9223C23BF60043E6E8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB9123C23BF60043E6E8 /* GalleryViewController.swift */; };
 		4DB0FB9423C23C0D0043E6E8 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB9323C23C0D0043E6E8 /* Rule.swift */; };
@@ -38,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
+		4D444B3923FDBB12003FFFEE /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersViewController.xib; sourceTree = "<group>"; };
 		4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
 		4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93823EC807500423793 /* AuthorWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWebService.swift; sourceTree = "<group>"; };
@@ -55,7 +60,6 @@
 		4DB0FB7723C23B250043E6E8 /* partyRules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partyRules.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DB0FB8323C23B260043E6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB0FB8623C23B260043E6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DB0FB8823C23B260043E6E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DB0FB9123C23BF60043E6E8 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 				4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */,
 			);
 			path = List;
+			sourceTree = "<group>";
+		};
+		4D444B3B23FDBC87003FFFEE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */,
+				4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 		4D89288423EEF8E500E73AE9 /* Fonts */ = {
@@ -133,9 +146,9 @@
 			children = (
 				4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */,
 				4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */,
-				4DB0FB8323C23B260043E6E8 /* Assets.xcassets */,
 				4DB0FB8523C23B260043E6E8 /* LaunchScreen.storyboard */,
 				4DB0FB8823C23B260043E6E8 /* Info.plist */,
+				4D444B3923FDBB12003FFFEE /* assets.xcassets */,
 			);
 			path = partyRules;
 			sourceTree = "<group>";
@@ -143,6 +156,7 @@
 		4DB0FB8E23C23B7E0043E6E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4D444B3B23FDBC87003FFFEE /* Game */,
 				4D0B832223DDEE4300486773 /* List */,
 				4D7CC94023EC9CBD00423793 /* RuleDetailsViewController.swift */,
 				4D7CC94123EC9CBD00423793 /* RuleDetailsViewController.xib */,
@@ -241,10 +255,11 @@
 				4D7CC94323EC9CBD00423793 /* RuleDetailsViewController.xib in Resources */,
 				4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */,
 				4D89288823EEF95300E73AE9 /* WorkSans-Light.ttf in Resources */,
+				4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */,
 				4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */,
-				4DB0FB8423C23B260043E6E8 /* Assets.xcassets in Resources */,
 				4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */,
 				4D89288723EEF95300E73AE9 /* WorkSans-Bold.ttf in Resources */,
+				4D444B3A23FDBB12003FFFEE /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 				4DC052F723DE06E3004DEE9B /* RulesViewController.swift in Sources */,
 				4DB0FB9223C23BF60043E6E8 /* GalleryViewController.swift in Sources */,
 				4DB0FB9423C23C0D0043E6E8 /* Rule.swift in Sources */,
+				4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */,
 				4D7CC93923EC807500423793 /* AuthorWebService.swift in Sources */,
 				4DB0FB7B23C23B250043E6E8 /* AppDelegate.swift in Sources */,
 				4DB0FB7D23C23B250043E6E8 /* SceneDelegate.swift in Sources */,

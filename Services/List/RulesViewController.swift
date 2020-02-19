@@ -69,12 +69,12 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rule = self.rules[indexPath.section]
-        let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
-        self.navigationController?.pushViewController(ruleDetails, animated: true)
+        //let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
+        //self.navigationController?.pushViewController(ruleDetails, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-
+        sortRulesByName()
         if UIApplication.shared.statusBarOrientation.isLandscape {
             let portrait = UIInterfaceOrientation.portrait.rawValue
             UIDevice.current.setValue(portrait, forKey: "orientation")

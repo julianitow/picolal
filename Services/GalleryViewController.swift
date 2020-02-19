@@ -17,6 +17,11 @@ class GalleryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            print("switch to portrait")
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -24,12 +29,17 @@ class GalleryViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
-    @IBAction func showRulesAction(_ sender: Any) {
+    @IBAction func playAction(_ sender: Any) {
+        let pvc = PlayersViewController.newInstance()
+        self.navigationController?.pushViewController(pvc, animated: true)
+    }
+    
+    /*@IBAction func showRulesAction(_ sender: Any) {
         self.ruleWebService.getRules { (rules) in
             let rlvc = RulesViewController.newInstance(rules: rules)
             self.navigationController?.pushViewController(rlvc, animated: true)
         }
-    }
+    }*/
     
     @IBAction func myAccountAction(_ sender: Any) {
         print("myAccount");
@@ -44,23 +54,6 @@ class GalleryViewController: UIViewController {
             let user2 = try?self.database.read(email: "guillan.julien@live.com")
              print(user2?.description)*/
             
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("test")
-        self.ruleWebService.getRules { (rules) in
-            
-        }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            print("switch to portrait")
-            let portrait = UIInterfaceOrientation.portrait.rawValue
-            UIDevice.current.setValue(portrait, forKey: "orientation")
         }
     }
 }

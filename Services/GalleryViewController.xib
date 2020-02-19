@@ -34,7 +34,7 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                     </state>
                     <connections>
-                        <action selector="showRulesAction:" destination="-1" eventType="touchUpInside" id="Kft-Rg-ack"/>
+                        <action selector="playAction:" destination="-1" eventType="touchUpInside" id="qM9-SF-PR6"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-lF-YWA">

@@ -13,6 +13,7 @@
                 <outlet property="categoryLabel" destination="wV6-5v-rrG" id="ot8-Br-Ibj"/>
                 <outlet property="contentLabel" destination="alD-qC-Rjp" id="v6C-DM-LYv"/>
                 <outlet property="nameLabel" destination="Ofi-m6-kXf" id="DPT-Nj-sv1"/>
+                <outlet property="playerLabel" destination="SkK-WC-ZmW" id="eWI-jj-p7d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -45,14 +46,32 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyc-VZ-iQo">
+                    <rect key="frame" x="584" y="345" width="51" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Next" backgroundImage="next_arrow">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="nextRuleAction:" destination="-1" eventType="touchUpInside" id="awZ-mF-QuF"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkK-WC-ZmW">
+                    <rect key="frame" x="375" y="196.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="alD-qC-Rjp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5Dh-pP-uvv"/>
+                <constraint firstItem="alD-qC-Rjp" firstAttribute="leading" secondItem="SkK-WC-ZmW" secondAttribute="trailing" constant="10" id="87Y-dj-urf"/>
                 <constraint firstItem="alD-qC-Rjp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D5a-tw-pCk"/>
                 <constraint firstItem="wV6-5v-rrG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="JiE-zh-GgX"/>
                 <constraint firstItem="Ofi-m6-kXf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RAg-E2-91D"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wV6-5v-rrG" secondAttribute="bottom" constant="10" id="YrI-by-evG"/>
+                <constraint firstItem="SkK-WC-ZmW" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eaw-dC-qdT"/>
                 <constraint firstItem="Bgc-OH-3CS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="muP-B1-vSv"/>
                 <constraint firstItem="Ofi-m6-kXf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="s2F-je-gse"/>
                 <constraint firstAttribute="trailing" secondItem="Bgc-OH-3CS" secondAttribute="trailing" constant="10" id="y50-KF-MEW"/>
@@ -61,4 +80,7 @@
             <point key="canvasLocation" x="132" y="120"/>
         </view>
     </objects>
+    <resources>
+        <image name="next_arrow" width="159" height="122"/>
+    </resources>
 </document>
