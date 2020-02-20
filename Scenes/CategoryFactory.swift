@@ -10,9 +10,10 @@ import Foundation
 
 class CategoryFactory {
     static func categoryFrom(dictionnary: [String: Any]) -> Category? {
-        guard let name = dictionnary["name"] as? String else {
+        guard let name = dictionnary["name"] as? String,
+            let description = dictionnary["description"] as? String else {
             return nil
         }
-        return Category(name: name)
+        return Category(name: name, description: description)
     }
 }

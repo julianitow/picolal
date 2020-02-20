@@ -35,4 +35,31 @@ class CategoryWebService {
         })
         task.resume()
     }
+    
+    func getAllCategories(completion: @escaping ([Category]) -> Void) -> Void {
+        guard let categoriesURL = URL(string: "http://192.168.1.24:8080/api/categories") else {
+            return;
+        }
+        let task = URLSession.shared.dataTask(with: categoriesURL, completionHandler: { (data: Data?, res, err) in
+
+            guard let bytes = data,
+                  err == nil,
+                  let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
+                    DispatchQueue.main.sync {
+                        completion([])
+                    }
+                return
+            }
+            let categories = json.compactMap { (obj) -> Category? in
+                guard let dict = obj as? [String: Any] else {
+                    return nil
+                }
+                return CategoryFactory.categoryFrom(dictionnary: dict)
+            }
+            DispatchQueue.main.sync {
+                completion(categories)
+            }
+        })
+        task.resume()
+    }
 }

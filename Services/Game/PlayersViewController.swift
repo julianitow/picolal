@@ -9,10 +9,14 @@
 import UIKit
 
 class PlayersViewController: UIViewController {
-
+    
+    let categoryWebService = CategoryWebService()
+    var categories: [Category]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
+        getCategories()
         // Do any additional setup after loading the view.
     }
     
@@ -38,8 +42,10 @@ class PlayersViewController: UIViewController {
         textFields.forEach({ (textField) in
             players.append(textField.text!)
         })
-        let rdvc = RuleDetailsViewController.newInstance(players: players)
-        navigationController?.pushViewController(rdvc, animated: true)
+        //let rdvc = RuleDetailsViewController.newInstance(players: players)
+        let csvc = CategorySelectionViewController.newInstance(players: players, categories: self.categories)
+        
+        navigationController?.pushViewController(csvc, animated: true)
     }
     
     func getAllTextFields(fromView view: UIView)-> [UITextField] {
@@ -50,6 +56,13 @@ class PlayersViewController: UIViewController {
                 return getAllTextFields(fromView: view)
             }
         }.flatMap({$0})
+    }
+    
+    func getCategories(){
+        self.categoryWebService.getAllCategories(completion: {(categories) in
+            self.categories = categories
+        })
+        
     }
     
 

@@ -13,6 +13,7 @@ class RuleDetailsViewController: UIViewController {
     var rule: Rule!
     var rules: [Rule]!
     var players: [String]!
+    var category: String!
     
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
@@ -56,20 +57,23 @@ class RuleDetailsViewController: UIViewController {
         UIDevice.current.setValue(landscapeLeftValue, forKey: "orientation")
     }
     
-    class func newInstance(players: [String]) -> RuleDetailsViewController{
+    class func newInstance(players: [String], category: String) -> RuleDetailsViewController{
         let rdvc = RuleDetailsViewController()
         rdvc.players = players
+        rdvc.category = category
         return rdvc
     }
     
     func getRules(){
-        self.ruleWebService.getRules { (rules) in
+        self.ruleWebService.getRulesByCategory(categoryName: self.category, completion: { (rules) in
             self.rules = rules
+            print(rules.count)
+            print(self.players.count)
             let index = self.randomNumber(min: 0, max: rules.count)
             let indexPlayer = self.randomNumber(min: 0, max: self.players.count)
             self.display(rule: self.rules[index], player: self.players[indexPlayer])
             self.rules.remove(at: index)
-        }
+        })
     }
     
     func display(rule: Rule, player: String){
@@ -100,6 +104,9 @@ class RuleDetailsViewController: UIViewController {
             let rule = self.rules[indexRule]
             self.rules.remove(at: indexRule)
             display(rule: rule, player: player)
+        }
+        else if self.playerLabel.text == "Finished" {
+            self.navigationController?.popToRootViewController(animated: true)
         } else {
             self.categoryLabel.text = ""
             self.authorLabel.text = ""

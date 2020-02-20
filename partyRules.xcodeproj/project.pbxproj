@@ -13,6 +13,8 @@
 		4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */; };
 		4D444B4223FF06E6003FFFEE /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */; };
 		4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */; };
+		4D444B4A23FF2073003FFFEE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */; };
+		4D444B4B23FF2073003FFFEE /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */; };
 		4D7CC93623EC4C0000423793 /* RuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */; };
 		4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */; };
 		4D7CC93923EC807500423793 /* AuthorWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC93823EC807500423793 /* AuthorWebService.swift */; };
@@ -47,6 +49,8 @@
 		4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersViewController.xib; sourceTree = "<group>"; };
 		4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
+		4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
 		4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93823EC807500423793 /* AuthorWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWebService.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */,
 				4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */,
 				4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */,
+				4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */,
+				4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
 				4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */,
+				4D444B4B23FF2073003FFFEE /* CategoryTableViewCell.xib in Resources */,
 				4D7CC94323EC9CBD00423793 /* RuleDetailsViewController.xib in Resources */,
 				4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */,
 				4D89288823EEF95300E73AE9 /* WorkSans-Light.ttf in Resources */,
@@ -288,6 +295,7 @@
 				4D7CC93923EC807500423793 /* AuthorWebService.swift in Sources */,
 				4DB0FB7B23C23B250043E6E8 /* AppDelegate.swift in Sources */,
 				4DB0FB7D23C23B250043E6E8 /* SceneDelegate.swift in Sources */,
+				4D444B4A23FF2073003FFFEE /* CategoryTableViewCell.swift in Sources */,
 				4DFF0CA923CB9A6D00FA6963 /* RuleFactory.swift in Sources */,
 				4D89288B23EEFC7B00E73AE9 /* myAccountViewController.swift in Sources */,
 				4DB0FB9623C23C6A0043E6E8 /* Author.swift in Sources */,

@@ -10,12 +10,10 @@ import Foundation
 
 class Category: CustomStringConvertible {
     var name: String
+    var description: String
     
-    init(name: String) {
+    init(name: String, description: String) {
         self.name = name
-    }
-    
-    var description: String {
-        return "{\(self.name)}"
+        self.description = description
     }
 }
