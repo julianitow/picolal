@@ -11,7 +11,7 @@ import Foundation
 class RuleWebService {
     
     func getRules(completion: @escaping ([Rule]) -> Void) -> Void {
-        guard let rulesURL = URL(string: "http://192.168.1.24:8080/api/rules") else {
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/rules") else {
             return;
         }
         let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
@@ -33,6 +33,58 @@ class RuleWebService {
                 completion(rules)
             }
         })
+        task.resume()
+    }
+    
+    
+    func getRulesByCategory(category : Category ,completion: @escaping ([Rule]) -> Void) -> Void {
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/\(category.name)/rules") else {
+               return;
+           }
+           let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
+               guard let bytes = data,
+                     err == nil,
+                     let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
+                       DispatchQueue.main.sync {
+                           completion([])
+                       }
+                   return
+               }
+               let rules = json.compactMap { (obj) -> Rule? in
+                   guard let dict = obj as? [String: Any] else {
+                       return nil
+                   }
+                   return RuleFactory.ruleFrom(dictionnary: dict)
+               }
+               DispatchQueue.main.sync {
+                   completion(rules)
+               }
+           })
+           task.resume()
+       }
+    
+    
+    func createRule(rule: Rule, completion: @escaping(Bool) -> Void){
+        guard let ruleURL = URL(string: "http://lil-nas.ddns.net:8080/api/rules")
+            else{
+                return;
+            }
+        var request = URLRequest(url: ruleURL)
+        guard let dataToUpload = try? JSONEncoder().encode(rule) else{return;}
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "content-type")
+        let task = URLSession.shared.uploadTask(with: request, from: dataToUpload){data, response, error in
+            if let error = error {
+                print ("error: \(error)")
+                return
+            }
+            if let httpRes = response as? HTTPURLResponse {
+                completion(httpRes.statusCode == 201)
+                return
+            }
+            completion(false)
+
+        }
         task.resume()
     }
 }

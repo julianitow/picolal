@@ -22,3 +22,5 @@ class RuleFactory {
         return Rule(name: name, content: content, author: authorId, category: categoryId, rate: rate, drinks: drinks)
     }
 }
+
+
