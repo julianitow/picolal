@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="partyRules" customModuleProvider="target">
+            <connections>
+                <outlet property="mailTextField" destination="bQI-O4-ggn" id="5we-HJ-qQh"/>
+                <outlet property="nameTextField" destination="iTO-FS-0QR" id="5zQ-kr-jGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iTO-FS-0QR">
+                    <rect key="frame" x="0.0" y="141" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfO-3V-2jZ">
+                    <rect key="frame" x="0.0" y="417" width="414" height="53"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                    <state key="normal" title="Register"/>
+                    <connections>
+                        <action selector="registerButton:" destination="-1" eventType="touchUpInside" id="h8S-9e-Fdh"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQI-O4-ggn">
+                    <rect key="frame" x="0.0" y="233" width="414" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tfO-3V-2jZ" secondAttribute="bottom" constant="392" id="0DU-8y-f6J"/>
+                <constraint firstItem="bQI-O4-ggn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="29O-Zk-fFI"/>
+                <constraint firstItem="iTO-FS-0QR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5Ur-zJ-5va"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bQI-O4-ggn" secondAttribute="trailing" id="6y1-HE-Jp0"/>
+                <constraint firstItem="tfO-3V-2jZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gk2-W5-GFW"/>
+                <constraint firstItem="iTO-FS-0QR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="97" id="ZCf-ie-7sd"/>
+                <constraint firstItem="bQI-O4-ggn" firstAttribute="top" secondItem="iTO-FS-0QR" secondAttribute="bottom" constant="58" id="dy3-cZ-464"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iTO-FS-0QR" secondAttribute="trailing" id="eEJ-WH-wqp"/>
+                <constraint firstItem="iTO-FS-0QR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fxG-Ip-ga0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tfO-3V-2jZ" secondAttribute="trailing" id="kzT-tW-a0B"/>
+                <constraint firstItem="tfO-3V-2jZ" firstAttribute="top" secondItem="bQI-O4-ggn" secondAttribute="bottom" constant="150" id="mFi-TX-WbO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="106"/>
+        </view>
+    </objects>
+</document>

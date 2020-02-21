@@ -19,6 +19,6 @@ class User {
         self.email = email
     }
     var description: String {
-        return "{\(self.id), \(self.name), \(self.email)}"
+        return "{\(self.id)), \(self.name), \(self.email)}"
     }
 }

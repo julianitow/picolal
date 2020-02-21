@@ -37,6 +37,9 @@
 		A57091DE23FEE1D2008A8598 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DD23FEE1D2008A8598 /* Rate.swift */; };
 		A57091E023FEE4B7008A8598 /* RateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DF23FEE4B7008A8598 /* RateFactory.swift */; };
 		A57091E223FEE61E008A8598 /* RateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091E123FEE61E008A8598 /* RateWebService.swift */; };
+		A57091E523FFDFEA008A8598 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091E323FFDFEA008A8598 /* RegisterViewController.swift */; };
+		A57091E623FFDFEA008A8598 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57091E423FFDFEA008A8598 /* RegisterViewController.xib */; };
+		A593097224001BD400F77207 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A593097124001BD400F77207 /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		A57091DD23FEE1D2008A8598 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		A57091DF23FEE4B7008A8598 /* RateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFactory.swift; sourceTree = "<group>"; };
 		A57091E123FEE61E008A8598 /* RateWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateWebService.swift; sourceTree = "<group>"; };
+		A57091E323FFDFEA008A8598 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A57091E423FFDFEA008A8598 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		A593097124001BD400F77207 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				4D89288E23EEFDE400E73AE9 /* Database.swift */,
+				A593097124001BD400F77207 /* DBHelper.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 				4DB0FB9123C23BF60043E6E8 /* GalleryViewController.swift */,
 				4D89288923EEFC7B00E73AE9 /* myAccountViewController.swift */,
 				4D89288A23EEFC7B00E73AE9 /* myAccountViewController.xib */,
+				A57091E323FFDFEA008A8598 /* RegisterViewController.swift */,
+				A57091E423FFDFEA008A8598 /* RegisterViewController.xib */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -246,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
+				A57091E623FFDFEA008A8598 /* RegisterViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
 				4D7CC94323EC9CBD00423793 /* RuleDetailsViewController.xib in Resources */,
 				4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */,
@@ -265,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57091DE23FEE1D2008A8598 /* Rate.swift in Sources */,
+				A57091E523FFDFEA008A8598 /* RegisterViewController.swift in Sources */,
 				4D7CC93F23EC951800423793 /* CategoryWebService.swift in Sources */,
 				4D7CC94223EC9CBD00423793 /* RuleDetailsViewController.swift in Sources */,
+				A593097224001BD400F77207 /* DBHelper.swift in Sources */,
 				4D7CC93D23EC94E600423793 /* CategoryFactory.swift in Sources */,
 				4DC052F723DE06E3004DEE9B /* RulesViewController.swift in Sources */,
 				4DB0FB9223C23BF60043E6E8 /* GalleryViewController.swift in Sources */,

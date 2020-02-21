@@ -11,13 +11,22 @@ import UIKit
 class myAccountViewController: UIViewController {
     let ruleWebService : RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
-
+    
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func loginButton(_ sender: Any) {
+    }
+    @IBAction func registerButton(_ sender: Any) {
+        let registerPage = RegisterViewController.newInstance()
+        self.navigationController?.pushViewController(registerPage, animated: true)
+    }
     override func viewWillAppear(_ animated: Bool) {
 
         if UIApplication.shared.statusBarOrientation.isLandscape {
