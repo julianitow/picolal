@@ -24,6 +24,7 @@ class RuleDetailsViewController: UIViewController {
     
     let ruleWebService: RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
+    let rateWebService: RateWebService = RateWebService()
 
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -74,6 +75,7 @@ class RuleDetailsViewController: UIViewController {
     }
     
     func display(rule: Rule, player: String){
+        self.rule = rule
         self.nameLabel.text = rule.name
         self.contentLabel.text = self.breakString(string: rule.content)
         self.playerLabel.text = player
@@ -85,8 +87,13 @@ class RuleDetailsViewController: UIViewController {
         })
         let starBackground = UIColor(red: 253.0/255, green: 216.0/255, blue: 53.0/255, alpha: 255.0/255)
         let stars = getAllStars(fromView: self.rateStackView)
-        for nbBtn in 0..<rule.rate {
-            stars[nbBtn].backgroundColor = starBackground
+        
+        for nbBtn in 0..<stars.count {
+            if nbBtn < rule.rate {
+                stars[nbBtn].backgroundColor = starBackground
+            }
+            stars[nbBtn].tag = nbBtn
+            stars[nbBtn].addTarget(self, action: #selector(rateAction), for: .touchUpInside)
         }
     }
     
@@ -99,6 +106,12 @@ class RuleDetailsViewController: UIViewController {
                 return getAllStars(fromView: view as! UIStackView)
             }
         }.flatMap({$0})
+    }
+    
+    @objc func rateAction(sender: UIButton!){
+        print(rule)
+        //let rate = Rate(rate: sender.tag + 1, rule: self.rule)
+        //self.rateWebService.createRate(rate: <#T##Rate#>, completion: <#T##(Bool) -> Void#>)
     }
     
     func randomNumber(min: Int, max: Int) -> Int{
