@@ -36,10 +36,8 @@ class RuleDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if UIApplication.shared.statusBarOrientation.isPortrait {
-            let landscape = UIInterfaceOrientation.landscapeLeft.rawValue
-            UIDevice.current.setValue(landscape, forKey: "orientation")
-        }
+        
+        rotateLandscape()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,8 +65,6 @@ class RuleDetailsViewController: UIViewController {
     func getRules(){
         self.ruleWebService.getRulesByCategory(categoryName: self.category, completion: { (rules) in
             self.rules = rules
-            print(rules.count)
-            print(self.players.count)
             let index = self.randomNumber(min: 0, max: rules.count)
             let indexPlayer = self.randomNumber(min: 0, max: self.players.count)
             self.display(rule: self.rules[index], player: self.players[indexPlayer])
@@ -78,7 +74,7 @@ class RuleDetailsViewController: UIViewController {
     
     func display(rule: Rule, player: String){
         self.nameLabel.text = rule.name
-        self.contentLabel.text = rule.content
+        self.contentLabel.text = self.breakString(string: rule.content)
         self.playerLabel.text = player
         authorWebService.getAuthor(id: rule.author, completion: { author in
             if !author.isEmpty {
@@ -116,9 +112,50 @@ class RuleDetailsViewController: UIViewController {
             self.playerLabel.text = "Finished"
         }
     }
-    
-    func instanciateData(){
-        print(self.rules)
-    }
 
+    @IBAction func quitAction(_ sender: Any) {
+        let alert = UIAlertController(title: "Already drunk ?", message: "Are you sure you want to leave ? ", preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+    }
+    
+    func breakString(string: String) -> String{
+        var result = string
+        if(string.count > 80){
+            var offset = 50
+            var index = string.index(string.startIndex, offsetBy: offset)
+            while(string[index] != " "){
+                offset+=1
+                index = string.index(string.startIndex, offsetBy: offset)
+            }
+            result.insert("\n", at: index)
+        }
+        return result
+        
+    }
+    
+    func rotateLandscape(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isPortrait{
+            let landscape = UIInterfaceOrientation.landscapeLeft.rawValue
+            UIDevice.current.setValue(landscape, forKey: "orientation")
+        }
+    }
 }

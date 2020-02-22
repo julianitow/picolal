@@ -17,11 +17,8 @@ class GalleryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            print("switch to portrait")
-            let portrait = UIInterfaceOrientation.portrait.rawValue
-            UIDevice.current.setValue(portrait, forKey: "orientation")
-        }
+        
+        rotatePortrait()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,18 +39,35 @@ class GalleryViewController: UIViewController {
     }*/
     
     @IBAction func myAccountAction(_ sender: Any) {
-        print("myAccount");
-        var author: Author
         authorWebService.getAuthor(id: 1) { (Author) in
-            print(Author[0])
             let user: User = User(id: Author[0].id, name: Author[0].name, email: Author[0].email)
             self.database.create(user: user)
-            let user2 = try?self.database.read(id: user.id)
-            print(user2?.description)
             /*self.database.create(user: user)
             let user2 = try?self.database.read(email: "guillan.julien@live.com")
              print(user2?.description)*/
+            let myAccountPage = myAccountViewController.newInstance()
+            self.navigationController?.pushViewController(myAccountPage, animated: true)
             
+        }
+    }
+    
+    func rotatePortrait(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isLandscape{
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
         }
     }
 }

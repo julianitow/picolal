@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Author: CustomStringConvertible {
+class Author: CustomStringConvertible, Encodable {
     var id: Int
     var name: String
     var email: String

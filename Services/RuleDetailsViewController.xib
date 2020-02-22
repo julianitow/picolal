@@ -36,8 +36,8 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofi-m6-kXf">
-                    <rect key="frame" x="407" y="40" width="82" height="35.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofi-m6-kXf">
+                    <rect key="frame" x="86" y="40" width="724" height="36"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="30"/>
                     <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -65,30 +65,47 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkK-WC-ZmW">
-                    <rect key="frame" x="418" y="130.5" width="60" height="26"/>
+                    <rect key="frame" x="418" y="131" width="60" height="26"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBJ-Cs-u0V">
+                    <rect key="frame" x="20" y="20" width="56" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="BmT-TS-71M"/>
+                        <constraint firstAttribute="width" constant="56" id="eZi-Ab-31r"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="quitButton_bg">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="quitAction:" destination="-1" eventType="touchUpInside" id="91E-2h-V8z"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="alD-qC-Rjp" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="5Dh-pP-uvv"/>
+                <constraint firstItem="fBJ-Cs-u0V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="7Hy-kI-X4h"/>
                 <constraint firstItem="alD-qC-Rjp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="D5a-tw-pCk"/>
                 <constraint firstItem="SkK-WC-ZmW" firstAttribute="top" secondItem="Ofi-m6-kXf" secondAttribute="bottom" constant="55" id="Ghu-EB-dAQ"/>
                 <constraint firstItem="wV6-5v-rrG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="JiE-zh-GgX"/>
                 <constraint firstItem="Ofi-m6-kXf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RAg-E2-91D"/>
+                <constraint firstItem="fBJ-Cs-u0V" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="YPQ-a3-L4B"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wV6-5v-rrG" secondAttribute="bottom" constant="10" id="YrI-by-evG"/>
+                <constraint firstItem="Ofi-m6-kXf" firstAttribute="leading" secondItem="fBJ-Cs-u0V" secondAttribute="trailing" constant="10" id="hoL-Ns-ZuR"/>
                 <constraint firstItem="SkK-WC-ZmW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kjX-Ua-vYK"/>
                 <constraint firstItem="Bgc-OH-3CS" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="10" id="muP-B1-vSv"/>
                 <constraint firstItem="Ofi-m6-kXf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="s2F-je-gse"/>
                 <constraint firstAttribute="trailing" secondItem="Bgc-OH-3CS" secondAttribute="trailing" constant="10" id="y50-KF-MEW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="132" y="120"/>
+            <point key="canvasLocation" x="131.91964285714286" y="118.84057971014494"/>
         </view>
     </objects>
     <resources>
         <image name="next_arrow" width="159" height="122"/>
+        <image name="quitButton_bg" width="512" height="512"/>
     </resources>
 </document>
