@@ -14,6 +14,8 @@ class RuleDetailsViewController: UIViewController {
     var rules: [Rule]!
     var players: [String]!
     var category: String!
+    var voted:Bool = false
+    
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
@@ -75,6 +77,7 @@ class RuleDetailsViewController: UIViewController {
     }
     
     func display(rule: Rule, player: String){
+        self.voted = false
         self.rule = rule
         self.nameLabel.text = rule.name
         self.contentLabel.text = self.breakString(string: rule.content)
@@ -109,9 +112,26 @@ class RuleDetailsViewController: UIViewController {
     }
     
     @objc func rateAction(sender: UIButton!){
-        print(rule)
-        //let rate = Rate(rate: sender.tag + 1, rule: self.rule)
-        //self.rateWebService.createRate(rate: <#T##Rate#>, completion: <#T##(Bool) -> Void#>)
+        if !self.voted{
+            let rate = Rate(rate: sender.tag + 1, rule: self.rule.id!)
+            self.rateWebService.createRate(rate: rate, completion: {(result) in
+                if result {
+                    self.ruleWebService.getRuleById(id: 1, completion: {(rule) in
+                        //print(rule)
+                    })
+                }
+            })
+            self.alert(title: "Thank you !", message: "Thank you for your participation ! :)", action: "You're welcome.")
+            self.voted = true
+        } else {
+            self.alert(title: "Thank you !", message: "But you can only vote one time per game ;)", action: "I understand.")
+        }
+    }
+    
+    func alert(title: String, message: String, action: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: action, style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func randomNumber(min: Int, max: Int) -> Int{

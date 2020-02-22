@@ -63,33 +63,6 @@ class RuleWebService {
     }
     
     
-    func getRulesByCategory(category : Category ,completion: @escaping ([Rule]) -> Void) -> Void {
-        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/\(category.name)/rules") else {
-               return;
-           }
-           let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
-               guard let bytes = data,
-                     err == nil,
-                     let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
-                       DispatchQueue.main.sync {
-                           completion([])
-                       }
-                   return
-               }
-               let rules = json.compactMap { (obj) -> Rule? in
-                   guard let dict = obj as? [String: Any] else {
-                       return nil
-                   }
-                   return RuleFactory.ruleFrom(dictionnary: dict)
-               }
-               DispatchQueue.main.sync {
-                   completion(rules)
-               }
-           })
-           task.resume()
-       }
-    
-    
     func createRule(rule: Rule, completion: @escaping(Bool) -> Void){
         guard let ruleURL = URL(string: "http://lil-nas.ddns.net:8080/api/rules")
             else{
@@ -111,6 +84,32 @@ class RuleWebService {
             completion(false)
 
         }
+        task.resume()
+    }
+    
+    func getRuleById(id: Int, completion: @escaping ([Rule]) -> Void) -> Void {
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/rule/" + String(id)) else {
+            return;
+        }
+        let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
+            guard let bytes = data,
+                  err == nil,
+                  let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
+                    DispatchQueue.main.sync {
+                        completion([])
+                    }
+                return
+            }
+            let rules = json.compactMap { (obj) -> Rule? in
+                guard let dict = obj as? [String: Any] else {
+                    return nil
+                }
+                return RuleFactory.ruleFrom(dictionnary: dict)
+            }
+            DispatchQueue.main.sync {
+                completion(rules)
+            }
+        })
         task.resume()
     }
 }
