@@ -9,6 +9,8 @@
 import UIKit
 
 class myAccountViewController: UIViewController {
+    let ruleWebService : RuleWebService = RuleWebService()
+    let authorWebService: AuthorWebService = AuthorWebService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +18,36 @@ class myAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if UIApplication.shared.statusBarOrientation.isLandscape {
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
+        
+        let rule = Rule(name: "Test", content: "Test de content", author: 1, category: 1, rate: 0, drinks: 0)
+        self.ruleWebService.createRule(rule: rule){(response) in
+            if response == false{
+                //N'a pas fonctionne
+            }
+            else {
+                //A fonctionne
+            }
+        }
+        
+        let author = Author(id: 99, name: "Jean", email: "jeanValJean@gmail.Com")
+        self.authorWebService.createAuthor(author: author){(response) in
+            if response == false{
+                //N'a pas fonctionne
+            }
+            else {
+                //A fonctionne
+            }
+        }
     }
-    */
+    class func newInstance() -> myAccountViewController{
+        let MyAccountViewController = myAccountViewController()
+        return MyAccountViewController
+    }
 
 }

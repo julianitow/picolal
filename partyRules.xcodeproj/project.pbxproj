@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */; };
-		4D444B3A23FDBB12003FFFEE /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3923FDBB12003FFFEE /* assets.xcassets */; };
+		4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABD12401886F002EABD3 /* assets.xcassets */; };
 		4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */; };
 		4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */; };
 		4D444B4223FF06E6003FFFEE /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */; };
@@ -40,11 +40,14 @@
 		4DC052F723DE06E3004DEE9B /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC052F523DE06E3004DEE9B /* RulesViewController.swift */; };
 		4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC052F623DE06E3004DEE9B /* RulesViewController.xib */; };
 		4DFF0CA923CB9A6D00FA6963 /* RuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0CA823CB9A6D00FA6963 /* RuleFactory.swift */; };
+		A57091DE23FEE1D2008A8598 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DD23FEE1D2008A8598 /* Rate.swift */; };
+		A57091E023FEE4B7008A8598 /* RateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DF23FEE4B7008A8598 /* RateFactory.swift */; };
+		A57091E223FEE61E008A8598 /* RateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091E123FEE61E008A8598 /* RateWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
-		4D444B3923FDBB12003FFFEE /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		4D3AABD12401886F002EABD3 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersViewController.xib; sourceTree = "<group>"; };
 		4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +81,9 @@
 		4DC052F523DE06E3004DEE9B /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		4DC052F623DE06E3004DEE9B /* RulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesViewController.xib; sourceTree = "<group>"; };
 		4DFF0CA823CB9A6D00FA6963 /* RuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleFactory.swift; sourceTree = "<group>"; };
+		A57091DD23FEE1D2008A8598 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		A57091DF23FEE4B7008A8598 /* RateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFactory.swift; sourceTree = "<group>"; };
+		A57091E123FEE61E008A8598 /* RateWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,11 +162,11 @@
 		4DB0FB7923C23B250043E6E8 /* partyRules */ = {
 			isa = PBXGroup;
 			children = (
+				4D3AABD12401886F002EABD3 /* assets.xcassets */,
 				4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */,
 				4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */,
 				4DB0FB8523C23B260043E6E8 /* LaunchScreen.storyboard */,
 				4DB0FB8823C23B260043E6E8 /* Info.plist */,
-				4D444B3923FDBB12003FFFEE /* assets.xcassets */,
 			);
 			path = partyRules;
 			sourceTree = "<group>";
@@ -187,6 +193,7 @@
 				4DB0FB9323C23C0D0043E6E8 /* Rule.swift */,
 				4DB0FB9523C23C6A0043E6E8 /* Author.swift */,
 				4DB0FB9723C23C750043E6E8 /* Category.swift */,
+				A57091DD23FEE1D2008A8598 /* Rate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 				4D7CC93A23EC808100423793 /* AuthorFactory.swift */,
 				4D7CC93C23EC94E600423793 /* CategoryFactory.swift */,
 				4D7CC93E23EC951800423793 /* CategoryWebService.swift */,
+				A57091DF23FEE4B7008A8598 /* RateFactory.swift */,
+				A57091E123FEE61E008A8598 /* RateWebService.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -264,6 +273,7 @@
 			files = (
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
+				4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */,
 				4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */,
 				4D444B4B23FF2073003FFFEE /* CategoryTableViewCell.xib in Resources */,
 				4D7CC94323EC9CBD00423793 /* RuleDetailsViewController.xib in Resources */,
@@ -273,7 +283,6 @@
 				4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */,
 				4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */,
 				4D89288723EEF95300E73AE9 /* WorkSans-Bold.ttf in Resources */,
-				4D444B3A23FDBB12003FFFEE /* assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57091DE23FEE1D2008A8598 /* Rate.swift in Sources */,
 				4D7CC93F23EC951800423793 /* CategoryWebService.swift in Sources */,
 				4D7CC94223EC9CBD00423793 /* RuleDetailsViewController.swift in Sources */,
 				4D7CC93D23EC94E600423793 /* CategoryFactory.swift in Sources */,
@@ -293,6 +303,7 @@
 				4DB0FB9423C23C0D0043E6E8 /* Rule.swift in Sources */,
 				4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */,
 				4D7CC93923EC807500423793 /* AuthorWebService.swift in Sources */,
+				A57091E023FEE4B7008A8598 /* RateFactory.swift in Sources */,
 				4DB0FB7B23C23B250043E6E8 /* AppDelegate.swift in Sources */,
 				4DB0FB7D23C23B250043E6E8 /* SceneDelegate.swift in Sources */,
 				4D444B4A23FF2073003FFFEE /* CategoryTableViewCell.swift in Sources */,
@@ -301,6 +312,7 @@
 				4DB0FB9623C23C6A0043E6E8 /* Author.swift in Sources */,
 				4D7CC93623EC4C0000423793 /* RuleTableViewCell.swift in Sources */,
 				4D89288F23EEFDE400E73AE9 /* Database.swift in Sources */,
+				A57091E223FEE61E008A8598 /* RateWebService.swift in Sources */,
 				4D89289123EEFE9900E73AE9 /* User.swift in Sources */,
 				4D7CC93B23EC808100423793 /* AuthorFactory.swift in Sources */,
 				4DB0FB9A23C2406E0043E6E8 /* RuleWebService.swift in Sources */,
