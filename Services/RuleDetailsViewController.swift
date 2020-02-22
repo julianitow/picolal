@@ -116,9 +116,15 @@ class RuleDetailsViewController: UIViewController {
             self.playerLabel.text = "Finished"
         }
     }
-    
-    func instanciateData(){
-        print(self.rules)
-    }
 
+    @IBAction func quitAction(_ sender: Any) {
+        let alert = UIAlertController(title: "Already drunk ?", message: "Are you sure you want to leave ? ", preferredStyle: .actionSheet)
+
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+        self.present(alert, animated: true)
+        
+        alert.add
+    }
 }

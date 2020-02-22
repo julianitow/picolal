@@ -79,6 +79,8 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
             let portrait = UIInterfaceOrientation.portrait.rawValue
             UIDevice.current.setValue(portrait, forKey: "orientation")
         }
+        
+        sortRulesByName()
     }
     
     func sortRulesByName(){

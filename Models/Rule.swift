@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Rule: CustomStringConvertible {
+class Rule: CustomStringConvertible, Encodable {
     var author: Int
     var category: Int
     var name: String
