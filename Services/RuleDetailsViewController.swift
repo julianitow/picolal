@@ -20,6 +20,8 @@ class RuleDetailsViewController: UIViewController {
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var playerLabel: UILabel!
+    @IBOutlet var drinksLabel: UILabel!
+    @IBOutlet var drinksStackView: UIStackView!
     
     let ruleWebService: RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
@@ -76,6 +78,7 @@ class RuleDetailsViewController: UIViewController {
         self.nameLabel.text = rule.name
         self.contentLabel.text = self.breakString(string: rule.content)
         self.playerLabel.text = player
+        self.drinksLabel.text = String(rule.drinks)
         authorWebService.getAuthor(id: rule.author, completion: { author in
             if !author.isEmpty {
                 self.authorLabel.text = author[0].name
@@ -109,6 +112,7 @@ class RuleDetailsViewController: UIViewController {
             self.nameLabel.text = ""
             self.contentLabel.text = ""
             self.nameLabel.text = ""
+            self.drinksStackView.removeFromSuperview()
             self.playerLabel.text = "Finished"
         }
     }
