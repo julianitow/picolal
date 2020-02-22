@@ -63,7 +63,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="LTv-lF-YWA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CAp-au-8E6"/>
                 <constraint firstItem="C27-vt-Rgf" firstAttribute="top" secondItem="LTv-lF-YWA" secondAttribute="bottom" constant="8" id="HC0-8j-kiM"/>

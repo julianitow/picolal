@@ -9,7 +9,7 @@
 import Foundation
 
 class Author: CustomStringConvertible, Encodable {
-    var id: Int
+    var id: Int?
     var name: String
     var email: String
     
@@ -19,8 +19,13 @@ class Author: CustomStringConvertible, Encodable {
         self.email = email
     }
     
+    init(name: String, email: String) {
+        self.name = name
+        self.email = email
+    }
+    
     var description: String {
-        return "{\(self.id), \(self.name), \(self.email)}"
+        return "{\(self.name), \(self.email)}"
     }
     
     func setName(name: String) -> Void {

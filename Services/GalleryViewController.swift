@@ -40,11 +40,7 @@ class GalleryViewController: UIViewController {
     
     @IBAction func myAccountAction(_ sender: Any) {
         authorWebService.getAuthor(id: 1) { (Author) in
-            let user: User = User(id: Author[0].id, name: Author[0].name, email: Author[0].email)
-            self.database.create(user: user)
-            /*self.database.create(user: user)
-            let user2 = try?self.database.read(email: "guillan.julien@live.com")
-             print(user2?.description)*/
+            
             let myAccountPage = myAccountViewController.newInstance()
             self.navigationController?.pushViewController(myAccountPage, animated: true)
             

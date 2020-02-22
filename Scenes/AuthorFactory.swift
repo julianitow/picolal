@@ -10,11 +10,19 @@ import Foundation
 
 class AuthorFactory {
     static func authorFrom(dictionnary: [String: Any]) -> Author? {
-        guard let id = dictionnary["id"] as? Int,
+        let id: Int? = dictionnary["id"] as? Int
+        
+        guard
             let name = dictionnary["name"] as? String,
             let email = dictionnary["email"] as? String else {
             return nil
         }
-        return Author(id: id, name: name, email: email)
+        if id != nil {
+            return Author(id: id!, name: name, email: email)
+        } else {
+            return Author(name: name, email: email)
+        }
+        
     }
+
 }
