@@ -23,6 +23,8 @@ class PlayersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        rotatePortrait()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -76,5 +78,25 @@ class PlayersViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func rotatePortrait(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isLandscape{
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
+    }
 
 }
