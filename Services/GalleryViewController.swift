@@ -39,13 +39,9 @@ class GalleryViewController: UIViewController {
     }*/
     
     @IBAction func myAccountAction(_ sender: Any) {
-        print("myAccount");
-        var author: Author
         authorWebService.getAuthor(id: 1) { (Author) in
             let user: User = User(id: Author[0].id, name: Author[0].name, email: Author[0].email)
             self.database.create(user: user)
-            let user2 = try?self.database.read(id: user.id)
-            print(user2?.description)
             /*self.database.create(user: user)
             let user2 = try?self.database.read(email: "guillan.julien@live.com")
              print(user2?.description)*/
