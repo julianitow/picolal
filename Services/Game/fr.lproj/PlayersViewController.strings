@@ -1,0 +1,15 @@
+
+/* Class = "UITextField"; placeholder = "Player 1"; ObjectID = "Kky-X3-JHb"; */
+"Kky-X3-JHb.placeholder" = "Joueur 1";
+
+/* Class = "UITextField"; placeholder = "Player 3"; ObjectID = "U4U-hA-RRa"; */
+"U4U-hA-RRa.placeholder" = "Joueur 3";
+
+/* Class = "UITextField"; placeholder = "Player 2"; ObjectID = "hM2-aT-z2x"; */
+"hM2-aT-z2x.placeholder" = "Joueur 2";
+
+/* Class = "UILabel"; text = "Drunkers"; ObjectID = "i9h-E5-TPn"; */
+"i9h-E5-TPn.text" = "Buveurs";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "tKw-UQ-e1W"; */
+"tKw-UQ-e1W.normalTitle" = "Jouer";

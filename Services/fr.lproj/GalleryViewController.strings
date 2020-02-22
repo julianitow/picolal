@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "My account"; ObjectID = "5AM-6c-geN"; */
+"5AM-6c-geN.normalTitle" = "Mon Compte";
+
+/* Class = "UILabel"; text = "Picolal"; ObjectID = "C27-vt-Rgf"; */
+"C27-vt-Rgf.text" = "Picolal";
+
+/* Class = "UILabel"; text = "Welcome to"; ObjectID = "LTv-lF-YWA"; */
+"LTv-lF-YWA.text" = "Bienvenue dans";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "QN8-WJ-6cl"; */
+"QN8-WJ-6cl.normalTitle" = "Jouer";

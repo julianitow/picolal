@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */; };
 		4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABD12401886F002EABD3 /* assets.xcassets */; };
 		4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */; };
-		4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */; };
 		4D444B4223FF06E6003FFFEE /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */; };
-		4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */; };
 		4D444B4A23FF2073003FFFEE /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */; };
 		4D444B4B23FF2073003FFFEE /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */; };
 		4D7CC93623EC4C0000423793 /* RuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */; };
@@ -38,20 +35,20 @@
 		4DB0FB9823C23C750043E6E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB9723C23C750043E6E8 /* Category.swift */; };
 		4DB0FB9A23C2406E0043E6E8 /* RuleWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0FB9923C2406E0043E6E8 /* RuleWebService.swift */; };
 		4DC052F723DE06E3004DEE9B /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC052F523DE06E3004DEE9B /* RulesViewController.swift */; };
-		4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC052F623DE06E3004DEE9B /* RulesViewController.xib */; };
 		4DFF0CA923CB9A6D00FA6963 /* RuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF0CA823CB9A6D00FA6963 /* RuleFactory.swift */; };
+		7CEC10A32401C2F600C83BDE /* RulesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CEC10A52401C2F600C83BDE /* RulesViewController.xib */; };
+		7CEC10AC2401C34B00C83BDE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CEC10AE2401C34B00C83BDE /* PlayersViewController.xib */; };
+		7CEC10B32401C38900C83BDE /* CategorySelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CEC10B52401C38900C83BDE /* CategorySelectionViewController.xib */; };
+		7CEC10BA2401C3B600C83BDE /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CEC10BC2401C3B600C83BDE /* GalleryViewController.xib */; };
 		A57091DE23FEE1D2008A8598 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DD23FEE1D2008A8598 /* Rate.swift */; };
 		A57091E023FEE4B7008A8598 /* RateFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091DF23FEE4B7008A8598 /* RateFactory.swift */; };
 		A57091E223FEE61E008A8598 /* RateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57091E123FEE61E008A8598 /* RateWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		4D3AABD12401886F002EABD3 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
-		4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersViewController.xib; sourceTree = "<group>"; };
 		4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
-		4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
 		4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,8 +76,22 @@
 		4DB0FB9723C23C750043E6E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4DB0FB9923C2406E0043E6E8 /* RuleWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleWebService.swift; sourceTree = "<group>"; };
 		4DC052F523DE06E3004DEE9B /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
-		4DC052F623DE06E3004DEE9B /* RulesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RulesViewController.xib; sourceTree = "<group>"; };
 		4DFF0CA823CB9A6D00FA6963 /* RuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleFactory.swift; sourceTree = "<group>"; };
+		7CEC10A12401C2D900C83BDE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7CEC10A22401C2E900C83BDE /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7CEC10A42401C2F600C83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RulesViewController.xib; sourceTree = "<group>"; };
+		7CEC10A72401C2FC00C83BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RulesViewController.strings; sourceTree = "<group>"; };
+		7CEC10A92401C2FE00C83BDE /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/RulesViewController.strings"; sourceTree = "<group>"; };
+		7CEC10AB2401C2FF00C83BDE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/RulesViewController.strings; sourceTree = "<group>"; };
+		7CEC10AD2401C34B00C83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PlayersViewController.xib; sourceTree = "<group>"; };
+		7CEC10B02401C34E00C83BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/PlayersViewController.strings; sourceTree = "<group>"; };
+		7CEC10B22401C34F00C83BDE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/PlayersViewController.strings; sourceTree = "<group>"; };
+		7CEC10B42401C38900C83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/CategorySelectionViewController.xib; sourceTree = "<group>"; };
+		7CEC10B72401C38E00C83BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/CategorySelectionViewController.strings; sourceTree = "<group>"; };
+		7CEC10B92401C38F00C83BDE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/CategorySelectionViewController.strings; sourceTree = "<group>"; };
+		7CEC10BB2401C3B600C83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GalleryViewController.xib; sourceTree = "<group>"; };
+		7CEC10BE2401C3BA00C83BDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GalleryViewController.strings; sourceTree = "<group>"; };
+		7CEC10C02401C3BB00C83BDE /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/GalleryViewController.strings; sourceTree = "<group>"; };
 		A57091DD23FEE1D2008A8598 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		A57091DF23FEE4B7008A8598 /* RateFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFactory.swift; sourceTree = "<group>"; };
 		A57091E123FEE61E008A8598 /* RateWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateWebService.swift; sourceTree = "<group>"; };
@@ -101,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				4DC052F523DE06E3004DEE9B /* RulesViewController.swift */,
-				4DC052F623DE06E3004DEE9B /* RulesViewController.xib */,
+				7CEC10A52401C2F600C83BDE /* RulesViewController.xib */,
 				4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */,
 				4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */,
 			);
@@ -112,9 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */,
-				4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */,
+				7CEC10AE2401C34B00C83BDE /* PlayersViewController.xib */,
 				4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */,
-				4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */,
+				7CEC10B52401C38900C83BDE /* CategorySelectionViewController.xib */,
 				4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */,
 				4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */,
 			);
@@ -178,7 +189,7 @@
 				4D0B832223DDEE4300486773 /* List */,
 				4D7CC94023EC9CBD00423793 /* RuleDetailsViewController.swift */,
 				4D7CC94123EC9CBD00423793 /* RuleDetailsViewController.xib */,
-				4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */,
+				7CEC10BC2401C3B600C83BDE /* GalleryViewController.xib */,
 				4DB0FB9123C23BF60043E6E8 /* GalleryViewController.swift */,
 				4D89288923EEFC7B00E73AE9 /* myAccountViewController.swift */,
 				4D89288A23EEFC7B00E73AE9 /* myAccountViewController.xib */,
@@ -255,6 +266,8 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
+				"en-GB",
 			);
 			mainGroup = 4DB0FB6E23C23B250043E6E8;
 			productRefGroup = 4DB0FB7823C23B250043E6E8 /* Products */;
@@ -274,13 +287,13 @@
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
 				4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */,
-				4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */,
+				7CEC10B32401C38900C83BDE /* CategorySelectionViewController.xib in Resources */,
 				4D444B4B23FF2073003FFFEE /* CategoryTableViewCell.xib in Resources */,
 				4D7CC94323EC9CBD00423793 /* RuleDetailsViewController.xib in Resources */,
-				4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */,
+				7CEC10A32401C2F600C83BDE /* RulesViewController.xib in Resources */,
 				4D89288823EEF95300E73AE9 /* WorkSans-Light.ttf in Resources */,
-				4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */,
-				4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */,
+				7CEC10AC2401C34B00C83BDE /* PlayersViewController.xib in Resources */,
+				7CEC10BA2401C3B600C83BDE /* GalleryViewController.xib in Resources */,
 				4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */,
 				4D89288723EEF95300E73AE9 /* WorkSans-Bold.ttf in Resources */,
 			);
@@ -327,8 +340,51 @@
 			isa = PBXVariantGroup;
 			children = (
 				4DB0FB8623C23B260043E6E8 /* Base */,
+				7CEC10A12401C2D900C83BDE /* fr */,
+				7CEC10A22401C2E900C83BDE /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7CEC10A52401C2F600C83BDE /* RulesViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CEC10A42401C2F600C83BDE /* Base */,
+				7CEC10A72401C2FC00C83BDE /* en */,
+				7CEC10A92401C2FE00C83BDE /* en-GB */,
+				7CEC10AB2401C2FF00C83BDE /* fr */,
+			);
+			name = RulesViewController.xib;
+			sourceTree = "<group>";
+		};
+		7CEC10AE2401C34B00C83BDE /* PlayersViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CEC10AD2401C34B00C83BDE /* Base */,
+				7CEC10B02401C34E00C83BDE /* en */,
+				7CEC10B22401C34F00C83BDE /* fr */,
+			);
+			name = PlayersViewController.xib;
+			sourceTree = "<group>";
+		};
+		7CEC10B52401C38900C83BDE /* CategorySelectionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CEC10B42401C38900C83BDE /* Base */,
+				7CEC10B72401C38E00C83BDE /* en */,
+				7CEC10B92401C38F00C83BDE /* fr */,
+			);
+			name = CategorySelectionViewController.xib;
+			sourceTree = "<group>";
+		};
+		7CEC10BC2401C3B600C83BDE /* GalleryViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CEC10BB2401C3B600C83BDE /* Base */,
+				7CEC10BE2401C3BA00C83BDE /* en */,
+				7CEC10C02401C3BB00C83BDE /* fr */,
+			);
+			name = GalleryViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -338,6 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -398,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
