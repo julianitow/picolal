@@ -129,7 +129,12 @@ class RuleDetailsViewController: UIViewController {
     func breakString(string: String) -> String{
         var result = string
         if(string.count > 80){
-            let index = string.index(string.startIndex, offsetBy: 50)
+            var offset = 50
+            var index = string.index(string.startIndex, offsetBy: offset)
+            while(string[index] != " "){
+                offset+=1
+                index = string.index(string.startIndex, offsetBy: offset)
+            }
             result.insert("\n", at: index)
         }
         return result
