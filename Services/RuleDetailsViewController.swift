@@ -67,8 +67,6 @@ class RuleDetailsViewController: UIViewController {
     func getRules(){
         self.ruleWebService.getRulesByCategory(categoryName: self.category, completion: { (rules) in
             self.rules = rules
-            print(rules.count)
-            print(self.players.count)
             let index = self.randomNumber(min: 0, max: rules.count)
             let indexPlayer = self.randomNumber(min: 0, max: self.players.count)
             self.display(rule: self.rules[index], player: self.players[indexPlayer])
@@ -78,7 +76,7 @@ class RuleDetailsViewController: UIViewController {
     
     func display(rule: Rule, player: String){
         self.nameLabel.text = rule.name
-        self.contentLabel.text = rule.content
+        self.contentLabel.text = self.breakString(string: rule.content)
         self.playerLabel.text = player
         authorWebService.getAuthor(id: rule.author, completion: { author in
             if !author.isEmpty {
@@ -120,11 +118,20 @@ class RuleDetailsViewController: UIViewController {
     @IBAction func quitAction(_ sender: Any) {
         let alert = UIAlertController(title: "Already drunk ?", message: "Are you sure you want to leave ? ", preferredStyle: .actionSheet)
 
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
 
         self.present(alert, animated: true)
-        
-        alert.add
+    }
+    
+    func breakString(string: String) -> String{
+        var result = string
+        if(string.count > 80){
+            let index = string.index(string.startIndex, offsetBy: 50)
+            result.insert("\n", at: index)
+        }
+        return result
     }
 }
