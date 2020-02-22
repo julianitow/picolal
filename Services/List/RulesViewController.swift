@@ -75,12 +75,7 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         sortRulesByName()
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            let portrait = UIInterfaceOrientation.portrait.rawValue
-            UIDevice.current.setValue(portrait, forKey: "orientation")
-        }
-        
-        sortRulesByName()
+        rotatePortrait()
     }
     
     func sortRulesByName(){
@@ -101,6 +96,26 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     func sortRulesByDrinks(){
         self.rules.sort(by: { $0.drinks < $1.drinks })
         self.rulesTableView.reloadData()
+    }
+    
+    func rotatePortrait(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isLandscape{
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
     }
 
 }

@@ -36,10 +36,8 @@ class RuleDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if UIApplication.shared.statusBarOrientation.isPortrait {
-            let landscape = UIInterfaceOrientation.landscapeLeft.rawValue
-            UIDevice.current.setValue(landscape, forKey: "orientation")
-        }
+        
+        rotateLandscape()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -125,6 +123,25 @@ class RuleDetailsViewController: UIViewController {
 
         self.present(alert, animated: true)
         
-        alert.add
+    }
+    
+    func rotateLandscape(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isPortrait{
+            let landscape = UIInterfaceOrientation.landscapeLeft.rawValue
+            UIDevice.current.setValue(landscape, forKey: "orientation")
+        }
     }
 }

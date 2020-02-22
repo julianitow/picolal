@@ -17,11 +17,8 @@ class GalleryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        if UIApplication.shared.statusBarOrientation.isLandscape {
-            print("switch to portrait")
-            let portrait = UIInterfaceOrientation.portrait.rawValue
-            UIDevice.current.setValue(portrait, forKey: "orientation")
-        }
+        
+        rotatePortrait()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,6 +52,26 @@ class GalleryViewController: UIViewController {
             let myAccountPage = myAccountViewController.newInstance()
             self.navigationController?.pushViewController(myAccountPage, animated: true)
             
+        }
+    }
+    
+    func rotatePortrait(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isLandscape{
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
         }
     }
 }
