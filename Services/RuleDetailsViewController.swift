@@ -93,7 +93,7 @@ class RuleDetailsViewController: UIViewController {
         
         for nbBtn in 0..<stars.count {
             if nbBtn < rule.rate {
-                stars[nbBtn].backgroundColor = starBackground
+                stars[nbBtn].tintColor = starBackground
             }
             stars[nbBtn].tag = nbBtn
             stars[nbBtn].addTarget(self, action: #selector(rateAction), for: .touchUpInside)
@@ -103,7 +103,8 @@ class RuleDetailsViewController: UIViewController {
     func getAllStars(fromView view: UIStackView)-> [UIButton] {
         return view.arrangedSubviews.compactMap { (view) -> [UIButton]? in
             if view is UIButton {
-                view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+                //view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 255.0)
+                view.tintColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 255.0)
                 return [(view as! UIButton)]
             } else {
                 return getAllStars(fromView: view as! UIStackView)
