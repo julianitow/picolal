@@ -14,18 +14,17 @@ class RuleDetailsViewController: UIViewController {
     var rules: [Rule]!
     var players: [String]!
     var category: String!
-    
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
-    @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var playerLabel: UILabel!
     @IBOutlet var drinksLabel: UILabel!
     @IBOutlet var drinksStackView: UIStackView!
+    @IBOutlet var rateStackView: UIStackView!
     
     let ruleWebService: RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
-    let categoryWebService: CategoryWebService = CategoryWebService()
+
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .landscapeLeft
@@ -84,11 +83,22 @@ class RuleDetailsViewController: UIViewController {
                 self.authorLabel.text = author[0].name
             }
         })
-        categoryWebService.getCategory(id: rule.category, completion: { category in
-            if !category.isEmpty {
-                self.categoryLabel.text = category[0].name
+        let starBackground = UIColor(red: 253.0/255, green: 216.0/255, blue: 53.0/255, alpha: 255.0/255)
+        let stars = getAllStars(fromView: self.rateStackView)
+        for nbBtn in 0..<rule.rate {
+            stars[nbBtn].backgroundColor = starBackground
+        }
+    }
+    
+    func getAllStars(fromView view: UIStackView)-> [UIButton] {
+        return view.arrangedSubviews.compactMap { (view) -> [UIButton]? in
+            if view is UIButton {
+                view.backgroundColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+                return [(view as! UIButton)]
+            } else {
+                return getAllStars(fromView: view as! UIStackView)
             }
-        })
+        }.flatMap({$0})
     }
     
     func randomNumber(min: Int, max: Int) -> Int{
@@ -107,12 +117,12 @@ class RuleDetailsViewController: UIViewController {
         else if self.playerLabel.text == "Finished" {
             self.navigationController?.popToRootViewController(animated: true)
         } else {
-            self.categoryLabel.text = ""
             self.authorLabel.text = ""
             self.nameLabel.text = ""
             self.contentLabel.text = ""
             self.nameLabel.text = ""
             self.drinksStackView.removeFromSuperview()
+            self.rateStackView.removeFromSuperview()
             self.playerLabel.text = "Finished"
         }
     }
