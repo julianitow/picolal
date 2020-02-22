@@ -10,7 +10,7 @@ import Foundation
 
 class CategoryWebService {
     func getCategory(id: Int, completion: @escaping ([Category]) -> Void) -> Void {
-        guard let categoryURL = URL(string: "http://192.168.1.24:8080/api/category/" + String(id)) else {
+        guard let categoryURL = URL(string: "http://lil-nas.ddns.net:8080/api/category/" + String(id)) else {
             return;
         }
         let task = URLSession.shared.dataTask(with: categoryURL, completionHandler: { (data: Data?, res, err) in
@@ -37,11 +37,11 @@ class CategoryWebService {
     }
     
     func getAllCategories(completion: @escaping ([Category]) -> Void) -> Void {
-        guard let categoriesURL = URL(string: "http://192.168.1.24:8080/api/categories") else {
+        guard let categoriesURL = URL(string: "http://lil-nas.ddns.net:8080/api/categories") else {
             return;
         }
         let task = URLSession.shared.dataTask(with: categoriesURL, completionHandler: { (data: Data?, res, err) in
-
+            print(data)
             guard let bytes = data,
                   err == nil,
                   let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {

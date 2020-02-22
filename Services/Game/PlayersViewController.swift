@@ -61,6 +61,7 @@ class PlayersViewController: UIViewController {
     func getCategories(){
         self.categoryWebService.getAllCategories(completion: {(categories) in
             self.categories = categories
+            print(categories)
         })
         
     }

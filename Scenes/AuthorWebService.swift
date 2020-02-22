@@ -11,7 +11,7 @@ import Foundation
 class AuthorWebService {
     
     func getAuthor(id: Int, completion: @escaping ([Author]) -> Void) -> Void {
-        guard let authorURL = URL(string: "http://192.168.1.24:8080/api/author/" + String(id)) else {
+        guard let authorURL = URL(string: "http://lil-nas.ddns.net:8080/api/author/" + String(id)) else {
             return;
         }
         let task = URLSession.shared.dataTask(with: authorURL, completionHandler: { (data: Data?, res, err) in

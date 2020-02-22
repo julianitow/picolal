@@ -11,7 +11,7 @@ import Foundation
 class RuleWebService {
     
     func getRules(completion: @escaping ([Rule]) -> Void) -> Void {
-        guard let rulesURL = URL(string: "http://192.168.1.24:8080/api/rules") else {
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/rules") else {
             return;
         }
         let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
@@ -37,7 +37,7 @@ class RuleWebService {
     }
     
     func getRulesByCategory(categoryName: String, completion: @escaping ([Rule]) -> Void) -> Void {
-        guard let rulesURL = URL(string: "http://192.168.1.24:8080/api/category/" + categoryName + "/rules") else {
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/category/" + categoryName + "/rules") else {
             return;
         }
         let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
