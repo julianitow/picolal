@@ -136,7 +136,10 @@ class RuleDetailsViewController: UIViewController {
     }
     
     func randomNumber(min: Int, max: Int) -> Int{
-        return Int.random(in: min ..< max)
+        if(max > 0){
+            return Int.random(in: min ..< max)
+        }
+        return 0
     }
     
     @IBAction func nextRuleAction(_ sender: Any) {

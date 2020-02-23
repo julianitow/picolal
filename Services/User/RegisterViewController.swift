@@ -20,8 +20,6 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         self.nameInputText.delegate = self
         self.emailInputText.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     class func newInstance() -> RegisterViewController{
@@ -86,8 +84,8 @@ class RegisterViewController: UIViewController {
 }
     
     
-    extension RegisterViewController: UITextFieldDelegate {
-    
+extension RegisterViewController: UITextFieldDelegate {
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.keyboardVisible = true
     }
@@ -97,21 +95,8 @@ class RegisterViewController: UIViewController {
         if textField == self.nameInputText {
             return self.emailInputText.becomeFirstResponder() // ouverture du clavier
         }
-
+        
         self.keyboardVisible = false
         return false
     }
-    
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

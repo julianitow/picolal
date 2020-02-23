@@ -12,12 +12,16 @@ class PlayersViewController: UIViewController {
     
     let categoryWebService = CategoryWebService()
     var categories: [Category]!
+    var keyboardVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.interactivePopGestureRecognizer?.delegate = nil
         getCategories()
-        // Do any additional setup after loading the view.
+        let textfields = getAllTextFields(fromView: self.view)
+        textfields.forEach({(textField) in
+            textField.delegate = self
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,8 +46,11 @@ class PlayersViewController: UIViewController {
         let textFields = getAllTextFields(fromView: self.view)
         var players: [String] = []
         textFields.forEach({ (textField) in
-            players.append(textField.text!)
+            if(textField.text!.count > 0){
+                players.append(textField.text!)
+            }
         })
+        print(players)
         //let rdvc = RuleDetailsViewController.newInstance(players: players)
         let csvc = CategorySelectionViewController.newInstance(players: players, categories: self.categories)
         
@@ -69,15 +76,12 @@ class PlayersViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.keyboardVisible == true {
+            self.view.endEditing(true) // close all user interaction
+            self.keyboardVisible = false
+        }
     }
-    */
     
     func rotatePortrait(){
         var statusBarOrientation: UIInterfaceOrientation? {
@@ -99,4 +103,17 @@ class PlayersViewController: UIViewController {
         }
     }
 
+}
+
+extension PlayersViewController: UITextFieldDelegate {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.keyboardVisible = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.keyboardVisible = false
+        return false
+    }
 }
