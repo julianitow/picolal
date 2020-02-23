@@ -183,7 +183,6 @@ class RuleDetailsViewController: UIViewController {
     
     func breakString(string: String) -> String{
         var result = string
-        print(string.count)
         if(string.count > 70){
             var offset = 50
             var index = string.index(string.startIndex, offsetBy: offset)
@@ -193,7 +192,6 @@ class RuleDetailsViewController: UIViewController {
             }
             result.insert("\n", at: index)
         }
-        print(result.count)
         return result
         
     }
