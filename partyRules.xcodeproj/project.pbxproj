@@ -62,6 +62,7 @@
 		4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
 		4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		4D75C4E224032B7F00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GalleryViewController.xib; sourceTree = "<group>"; };
 		4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
 		4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93823EC807500423793 /* AuthorWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWebService.swift; sourceTree = "<group>"; };
@@ -351,6 +352,7 @@
 			children = (
 				4D3AABD82402F502002EABD3 /* en */,
 				4D3AABDB2402F529002EABD3 /* fr */,
+				4D75C4E224032B7F00E6424D /* Base */,
 			);
 			name = GalleryViewController.xib;
 			sourceTree = "<group>";

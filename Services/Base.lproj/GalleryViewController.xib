@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -29,7 +29,7 @@
                     <rect key="frame" x="66.999999999999886" y="417.34262029062279" width="281" height="64.000000000000043"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="48"/>
-                    <state key="normal" title="Jouer" backgroundImage="button_bg">
+                    <state key="normal" title="Play" backgroundImage="button_bg">
                         <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                     </state>
@@ -37,14 +37,14 @@
                         <action selector="playAction:" destination="-1" eventType="touchUpInside" id="qM9-SF-PR6"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenue sur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-lF-YWA">
-                    <rect key="frame" x="95" y="194" width="224.5" height="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTv-lF-YWA">
+                    <rect key="frame" x="117" y="194" width="180.5" height="40"/>
                     <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="34"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Picolal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C27-vt-Rgf">
-                    <rect key="frame" x="131" y="242" width="152" height="54"/>
+                    <rect key="frame" x="140.5" y="242" width="133.5" height="54"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="45"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -54,7 +54,7 @@
                     <rect key="frame" x="67" y="514" width="281" height="64.000000000000043"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
-                    <state key="normal" title="Mon compte" backgroundImage="button_bg">
+                    <state key="normal" title="My account" backgroundImage="button_bg">
                         <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                     </state>
@@ -62,14 +62,14 @@
                         <action selector="myAccountAction:" destination="-1" eventType="touchUpInside" id="PZk-9a-B21"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QbG-B4-YJi">
-                    <rect key="frame" x="182" y="832" width="50" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lgF-jj-T9S">
+                    <rect key="frame" x="182" y="841" width="50" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Crédits">
+                    <state key="normal" title="Credits">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
-                        <action selector="frCreditsAction:" destination="-1" eventType="touchUpInside" id="j4y-47-K5H"/>
+                        <action selector="creditsAction:" destination="-1" eventType="touchUpInside" id="IbF-mn-iDH"/>
                     </connections>
                 </button>
             </subviews>
