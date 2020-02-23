@@ -28,6 +28,24 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        sortRulesByName()
+        rotatePortrait()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     class func newInstance(rules: [Rule]) -> RulesViewController {
         let rlvc = RulesViewController()
         rlvc.rules = rules
@@ -55,6 +73,7 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.categoryLabel.text = category[0].name
             }
         })
+        cell.drinksLabel.text = String(rule.drinks)
         cell.nameLabel.text = rule.name
         cell.contentLabel.text = rule.content
         cell.layer.cornerRadius = 5
@@ -71,11 +90,6 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let rule = self.rules[indexPath.section]
         //let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
         //self.navigationController?.pushViewController(ruleDetails, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        sortRulesByName()
-        rotatePortrait()
     }
     
     func sortRulesByName(){

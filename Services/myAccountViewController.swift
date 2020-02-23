@@ -175,9 +175,19 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let authorId = users[0].id
         
         self.ruleWebService.getRulesByAuthorId(authorId: authorId) { (rules) in
-            let rlvc = RulesViewController.newInstance(rules: rules)
-            self.navigationController?.pushViewController(rlvc, animated: true)
+            if rules.count > 0 {
+                let rlvc = RulesViewController.newInstance(rules: rules)
+                self.navigationController?.pushViewController(rlvc, animated: true)
+            } else {
+                self.alert(title: "No rule", message: "You've not created rules yet.", action: "Oups sorry.")
+            }
         }
+    }
+    
+    func alert(title: String, message: String, action: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: action, style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     

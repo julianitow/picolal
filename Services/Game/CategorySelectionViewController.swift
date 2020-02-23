@@ -82,7 +82,7 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
            let headerView = UIView()
            headerView.backgroundColor = UIColor.clear
            return headerView
-       }
+    }
     
     /*func getCategories(){
         self.categoryWebService.getCategories { (rules) in

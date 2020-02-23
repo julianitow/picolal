@@ -6,8 +6,13 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Bold.ttf">
+            <string>WorkSans-Bold</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RulesViewController" customModule="partyRules" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RulesViewController" customModule="Picolal" customModuleProvider="target">
             <connections>
                 <outlet property="rulesTableView" destination="52T-iF-LmU" id="bc0-Ns-xqF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,15 +27,15 @@
                     <rect key="frame" x="0.0" y="160" width="414" height="702"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Règles disponibles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="k9G-2v-ecB">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My rules" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" id="k9G-2v-ecB">
                     <rect key="frame" x="0.0" y="74" width="414" height="87"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                    <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="40"/>
+                    <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="52T-iF-LmU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fxJ-Ss-OI8"/>
                 <constraint firstItem="52T-iF-LmU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="116" id="gJM-oJ-QO5"/>
