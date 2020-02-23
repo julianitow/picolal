@@ -27,7 +27,7 @@ class myAccountViewController: UIViewController {
         
         let db:DBHelper = DBHelper()
         //db.insert(id: 1, name: "John", mail: "Doe@doe.com")
-        //
+
         let users : [User] = db.readAll()
         
         if users.isEmpty {

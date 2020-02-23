@@ -12,6 +12,8 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var nameInputText: UITextField!
     @IBOutlet weak var emailInputText: UITextField!
+    @IBOutlet var loginInputText: UITextField!
+    
     var keyboardVisible = false
     let database : Database = Database()
     let authorWebService: AuthorWebService = AuthorWebService()
@@ -25,6 +27,16 @@ class RegisterViewController: UIViewController {
     class func newInstance() -> RegisterViewController{
         let rvc = RegisterViewController()
         return rvc
+    }
+    @IBAction func loginAction(_ sender: Any) {
+        if loginInputText.text == nil {
+            let alert = UIAlertController(title: "Error", message: "Please enter email.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+        let alert = UIAlertController(title: "Sorry", message: "Work in progress", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Shame on you.", style: .destructive, handler: nil))
+        self.present(alert, animated: true)
     }
     
     @IBAction func registerAction(_ sender: Any) {
@@ -51,6 +63,7 @@ class RegisterViewController: UIViewController {
                     else {
                         //A fonctionne
                         db.insert(id: author.id!+1, name: name!, mail: email!)
+                        db.deleteByID(id: author.id!+1)
                         DispatchQueue.main.async {
                             self.changeView()
                         }
