@@ -112,4 +112,54 @@ class RuleWebService {
         }
         task.resume()
     }
+    
+    func getRulesByAuthorId(authorId: Int, completion: @escaping ([Rule]) -> Void) -> Void {
+        print("ici")
+        print(String(authorId))
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/author/" + String(authorId) + "/rules") else {
+            return;
+        }
+        print(rulesURL)
+        let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
+            guard let bytes = data,
+                  err == nil,
+                  let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
+                    DispatchQueue.main.sync {
+                        completion([])
+                    }
+                return
+            }
+            let rules = json.compactMap { (obj) -> Rule? in
+                guard let dict = obj as? [String: Any] else {
+                    return nil
+                }
+                return RuleFactory.ruleFrom(dictionnary: dict)
+            }
+            print("ici")
+            print(rules)
+            DispatchQueue.main.sync {
+                completion(rules)
+            }
+        })
+        task.resume()
+    }
+    
+    func deleteRule(ruleId: Int, completion: @escaping(Bool) -> Void){
+        guard let ruleURL:URL = URL(string: "http://lil-nas.ddns.net:8080/api/rule/" + String(ruleId)) else {
+            return
+        }
+        var request = URLRequest(url: ruleURL)
+        request.httpMethod = "DELETE"
+
+        let session = URLSession.shared
+
+        let task = session.dataTask(with: request) {
+          (data, response, error) in
+          guard let _ = data else {
+            print(error as Any)
+            return
+          }
+        }
+        task.resume()
+    }
 }

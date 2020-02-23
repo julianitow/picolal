@@ -12,6 +12,8 @@ class RegisterViewController: UIViewController {
 
     @IBOutlet weak var nameInputText: UITextField!
     @IBOutlet weak var emailInputText: UITextField!
+    @IBOutlet var loginInputText: UITextField!
+    
     var keyboardVisible = false
     let database : Database = Database()
     let authorWebService: AuthorWebService = AuthorWebService()
@@ -25,6 +27,16 @@ class RegisterViewController: UIViewController {
     class func newInstance() -> RegisterViewController{
         let rvc = RegisterViewController()
         return rvc
+    }
+    @IBAction func loginAction(_ sender: Any) {
+        if loginInputText.text == nil {
+            let alert = UIAlertController(title: "Error", message: "Please enter email.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        }
+        let alert = UIAlertController(title: "Sorry", message: "Work in progress", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Shame on you.", style: .destructive, handler: nil))
+        self.present(alert, animated: true)
     }
     
     @IBAction func registerAction(_ sender: Any) {
@@ -46,18 +58,22 @@ class RegisterViewController: UIViewController {
                 self.authorWebService.createAuthor(author: authorApi){(response) in
                     if !response{
                         //N'a pas fonctionne
-                        print(response)
+                        print("Impossible de creer un nouvel utilisateur.")
                     }
                     else {
                         //A fonctionne
                         db.insert(id: author.id!+1, name: name!, mail: email!)
-                        let mavc = myAccountViewController.newInstance()
-                        self.navigationController?.pushViewController(mavc, animated: true)
-                        //db.insert(id: author.id, name: name, mail: email)
+                        DispatchQueue.main.async {
+                            self.changeView()
+                        }
                     }
                 }
             }
         }
+    }
+    
+    func changeView(){
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

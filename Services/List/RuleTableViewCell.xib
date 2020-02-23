@@ -6,48 +6,101 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="WorkSans-Bold.ttf">
+            <string>WorkSans-Bold</string>
+        </array>
+        <array key="WorkSans-Light.ttf">
+            <string>WorkSans-Light</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RuleCell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="RuleTableViewCell" customModule="partyRules" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RuleCell" rowHeight="200" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="RuleTableViewCell" customModule="Picolal" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2a-sH-r3A">
-                        <rect key="frame" x="10" y="10" width="300" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="10" y="10" width="300" height="23.5"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-9L-SYF">
-                        <rect key="frame" x="26" y="65" width="268" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpp-9L-SYF">
+                        <rect key="frame" x="26" y="63.5" width="268" height="23.5"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cr2-dS-5wH">
-                        <rect key="frame" x="272" y="119" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="262.5" y="116.5" width="51.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aio-dS-gxr">
-                        <rect key="frame" x="10" y="119" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="258.5" y="10" width="51.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pk3-7e-ecy">
+                        <rect key="frame" x="10" y="10" width="84.5" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9T-dt-O8x">
+                                <rect key="frame" x="0.0" y="0.0" width="54.5" height="45"/>
+                                <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink_bg" translatesAutoresizingMaskIntoConstraints="NO" id="4f7-eU-Xob">
+                                <rect key="frame" x="54.5" y="0.0" width="30" height="45"/>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XSL-ta-qdd">
+                        <rect key="frame" x="10" y="111" width="150" height="29"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHe-b9-s4Y">
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="29"/>
+                                <state key="normal" image="star_bg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYN-5z-OtY">
+                                <rect key="frame" x="30" y="0.0" width="30" height="29"/>
+                                <state key="normal" backgroundImage="star_bg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vR-fx-ct5">
+                                <rect key="frame" x="60" y="0.0" width="30" height="29"/>
+                                <state key="normal" backgroundImage="star_bg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHs-xL-jGz">
+                                <rect key="frame" x="90" y="0.0" width="30" height="29"/>
+                                <state key="normal" backgroundImage="star_bg"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4U-HH-caV">
+                                <rect key="frame" x="120" y="0.0" width="30" height="29"/>
+                                <state key="normal" backgroundImage="star_bg"/>
+                            </button>
+                        </subviews>
+                    </stackView>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="bpp-9L-SYF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Jb-h1-7Oe"/>
                     <constraint firstItem="cr2-dS-5wH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="6wb-db-DUM"/>
                     <constraint firstItem="w2a-sH-r3A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Iax-XC-Y8L"/>
-                    <constraint firstAttribute="bottom" secondItem="Aio-dS-gxr" secondAttribute="bottom" constant="10" id="Ryc-Cp-KOE"/>
+                    <constraint firstItem="Aio-dS-gxr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NPV-6P-YJ2"/>
                     <constraint firstItem="w2a-sH-r3A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Trj-JG-xfK"/>
-                    <constraint firstItem="Aio-dS-gxr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="eCo-98-6WO"/>
+                    <constraint firstAttribute="trailing" secondItem="Aio-dS-gxr" secondAttribute="trailing" constant="10" id="Y3h-ll-SLR"/>
+                    <constraint firstItem="pk3-7e-ecy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="b7a-Qx-g4C"/>
+                    <constraint firstAttribute="bottom" secondItem="XSL-ta-qdd" secondAttribute="bottom" constant="10" id="hg7-e4-eFC"/>
                     <constraint firstAttribute="bottom" secondItem="cr2-dS-5wH" secondAttribute="bottom" constant="10" id="hpr-sx-ASH"/>
+                    <constraint firstItem="XSL-ta-qdd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="oKB-Aj-PYz"/>
+                    <constraint firstItem="pk3-7e-ecy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pb9-zs-a1X"/>
                     <constraint firstItem="bpp-9L-SYF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="sD4-Tk-lj5"/>
                     <constraint firstAttribute="trailing" secondItem="w2a-sH-r3A" secondAttribute="trailing" constant="10" id="vwj-Px-D88"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bpp-9L-SYF" secondAttribute="trailing" constant="10" id="xSS-BZ-da6"/>
@@ -60,9 +113,14 @@
                 <outlet property="categoryLabel" destination="Aio-dS-gxr" id="4jr-sV-2WD"/>
                 <outlet property="cell" destination="H2p-sc-9uM" id="arO-w7-FfG"/>
                 <outlet property="contentLabel" destination="bpp-9L-SYF" id="i8n-It-24e"/>
+                <outlet property="drinksLabel" destination="r9T-dt-O8x" id="yYm-MU-rNa"/>
                 <outlet property="nameLabel" destination="w2a-sH-r3A" id="8wZ-Bk-sb1"/>
             </connections>
             <point key="canvasLocation" x="-59.420289855072468" y="-22.767857142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="drink_bg" width="30" height="45"/>
+        <image name="star_bg" width="30" height="29"/>
+    </resources>
 </document>

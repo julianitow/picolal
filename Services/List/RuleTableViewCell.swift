@@ -15,6 +15,7 @@ class RuleTableViewCell: UITableViewCell {
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var authorLabel: UILabel!
     @IBOutlet var categoryLabel: UILabel!
+    @IBOutlet var drinksLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,6 +11,7 @@ import UIKit
 class RulesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var authorWebService: AuthorWebService = AuthorWebService()
     var categoryWebService: CategoryWebService = CategoryWebService()
+    var ruleWebService: RuleWebService = RuleWebService()
     var rules:[Rule]!
     
     enum Identifier: String {
@@ -26,6 +27,24 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.rulesTableView.delegate = self
         self.rulesTableView.backgroundColor = UIColor(displayP3Red: (25/255), green: (118/255), blue: (210/255), alpha: 0)
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+        sortRulesByName()
+        rotatePortrait()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     class func newInstance(rules: [Rule]) -> RulesViewController {
@@ -55,6 +74,7 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.categoryLabel.text = category[0].name
             }
         })
+        cell.drinksLabel.text = String(rule.drinks)
         cell.nameLabel.text = rule.name
         cell.contentLabel.text = rule.content
         cell.layer.cornerRadius = 5
@@ -69,13 +89,16 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rule = self.rules[indexPath.section]
-        //let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
-        //self.navigationController?.pushViewController(ruleDetails, animated: true)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        sortRulesByName()
-        rotatePortrait()
+        let alert = UIAlertController(title: "Delete ?", message: "Are you sure ? This is irreversible.", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
+            let indexPath_tmp = IndexPath(item: 0, section: indexPath.section)
+            //self.rulesTableView.deleteRows(at: [indexPath_tmp], with: .fade)
+            self.ruleWebService.deleteRule(ruleId: rule.id!, completion: { rule in
+                //self.rules.remove(at: indexPath.section)
+            })
+        }))
+        self.present(alert, animated: true)
     }
     
     func sortRulesByName(){

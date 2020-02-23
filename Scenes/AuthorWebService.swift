@@ -61,5 +61,29 @@ class AuthorWebService {
         task.resume()
     }
     
+    func updateAuthor(authorId: Int, author: Author, completion: @escaping(Bool) -> Void) -> Void{
+        guard let authorURL = URL(string: "http://lil-nas.ddns.net:8080/api/author/" + String(authorId))
+            else{
+                return;
+            }
+        var request = URLRequest(url: authorURL)
+        guard let dataToUpload = try? JSONEncoder().encode(author) else{return;}
+        request.httpMethod = "PUT"
+        request.setValue("application/json", forHTTPHeaderField: "content-type")
+        let task = URLSession.shared.uploadTask(with: request, from: dataToUpload){data, response, error in
+
+            if error != nil {
+                print ("error: (error)")
+                return
+            }
+            if let httpRes = response as? HTTPURLResponse {
+                completion(httpRes.statusCode == 201)
+                return
+            }
+            completion(false)
+
+        }
+        task.resume()
+    }
     
 }

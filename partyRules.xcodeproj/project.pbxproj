@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		177E007B2401AA3500138A6C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E007A2401AA3500138A6C /* DBHelper.swift */; };
 		177E00812401B50C00138A6C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E007F2401B50C00138A6C /* RegisterViewController.swift */; };
-		177E00822401B50C00138A6C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177E00802401B50C00138A6C /* RegisterViewController.xib */; };
-		4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */; };
 		4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABD12401886F002EABD3 /* assets.xcassets */; };
+		4D3AABD72402F502002EABD3 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABD92402F502002EABD3 /* GalleryViewController.xib */; };
+		4D3AABDC2402F739002EABD3 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABDE2402F739002EABD3 /* RegisterViewController.xib */; };
 		4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */; };
 		4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */; };
 		4D444B4223FF06E6003FFFEE /* CategorySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */; };
@@ -51,15 +51,18 @@
 /* Begin PBXFileReference section */
 		177E007A2401AA3500138A6C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		177E007F2401B50C00138A6C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		177E00802401B50C00138A6C /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		4D3AABD12401886F002EABD3 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		4D3AABD82402F502002EABD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GalleryViewController.xib; sourceTree = "<group>"; };
+		4D3AABDA2402F529002EABD3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4D3AABDB2402F529002EABD3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/GalleryViewController.xib; sourceTree = "<group>"; };
+		4D3AABDD2402F739002EABD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RegisterViewController.xib; sourceTree = "<group>"; };
 		4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		4D444B3D23FDBCA8003FFFEE /* PlayersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersViewController.xib; sourceTree = "<group>"; };
 		4D444B4023FF06E6003FFFEE /* CategorySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectionViewController.swift; sourceTree = "<group>"; };
 		4D444B4123FF06E6003FFFEE /* CategorySelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectionViewController.xib; sourceTree = "<group>"; };
 		4D444B4823FF2073003FFFEE /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		4D444B4923FF2073003FFFEE /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		4D75C4E224032B7F00E6424D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GalleryViewController.xib; sourceTree = "<group>"; };
 		4D7CC93423EC4C0000423793 /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
 		4D7CC93523EC4C0000423793 /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
 		4D7CC93823EC807500423793 /* AuthorWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorWebService.swift; sourceTree = "<group>"; };
@@ -74,7 +77,7 @@
 		4D89288A23EEFC7B00E73AE9 /* myAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myAccountViewController.xib; sourceTree = "<group>"; };
 		4D89288E23EEFDE400E73AE9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4D89289023EEFE9900E73AE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4DB0FB7723C23B250043E6E8 /* partyRules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partyRules.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB0FB7723C23B250043E6E8 /* Picolal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4DB0FB8623C23B260043E6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,7 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				177E007F2401B50C00138A6C /* RegisterViewController.swift */,
-				177E00802401B50C00138A6C /* RegisterViewController.xib */,
+				4D3AABDE2402F739002EABD3 /* RegisterViewController.xib */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -170,7 +173,7 @@
 		4DB0FB7823C23B250043E6E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DB0FB7723C23B250043E6E8 /* partyRules.app */,
+				4DB0FB7723C23B250043E6E8 /* Picolal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 				4D0B832223DDEE4300486773 /* List */,
 				4D7CC94023EC9CBD00423793 /* RuleDetailsViewController.swift */,
 				4D7CC94123EC9CBD00423793 /* RuleDetailsViewController.xib */,
-				4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */,
+				4D3AABD92402F502002EABD3 /* GalleryViewController.xib */,
 				4DB0FB9123C23BF60043E6E8 /* GalleryViewController.swift */,
 				4D89288923EEFC7B00E73AE9 /* myAccountViewController.swift */,
 				4D89288A23EEFC7B00E73AE9 /* myAccountViewController.xib */,
@@ -247,7 +250,7 @@
 			);
 			name = partyRules;
 			productName = partyRules;
-			productReference = 4DB0FB7723C23B250043E6E8 /* partyRules.app */;
+			productReference = 4DB0FB7723C23B250043E6E8 /* Picolal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -272,6 +275,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 4DB0FB6E23C23B250043E6E8;
 			productRefGroup = 4DB0FB7823C23B250043E6E8 /* Products */;
@@ -289,7 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
-				177E00822401B50C00138A6C /* RegisterViewController.xib in Resources */,
+				4D3AABDC2402F739002EABD3 /* RegisterViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
 				4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */,
 				4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */,
@@ -298,7 +302,7 @@
 				4DC052F823DE06E3004DEE9B /* RulesViewController.xib in Resources */,
 				4D89288823EEF95300E73AE9 /* WorkSans-Light.ttf in Resources */,
 				4D444B3F23FDBCA8003FFFEE /* PlayersViewController.xib in Resources */,
-				4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */,
+				4D3AABD72402F502002EABD3 /* GalleryViewController.xib in Resources */,
 				4D7CC93723EC4C0000423793 /* RuleTableViewCell.xib in Resources */,
 				4D89288723EEF95300E73AE9 /* WorkSans-Bold.ttf in Resources */,
 			);
@@ -343,10 +347,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4D3AABD92402F502002EABD3 /* GalleryViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D3AABD82402F502002EABD3 /* en */,
+				4D3AABDB2402F529002EABD3 /* fr */,
+				4D75C4E224032B7F00E6424D /* Base */,
+			);
+			name = GalleryViewController.xib;
+			sourceTree = "<group>";
+		};
+		4D3AABDE2402F739002EABD3 /* RegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D3AABDD2402F739002EABD3 /* en */,
+			);
+			name = RegisterViewController.xib;
+			sourceTree = "<group>";
+		};
 		4DB0FB8523C23B260043E6E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4DB0FB8623C23B260043E6E8 /* Base */,
+				4D3AABDA2402F529002EABD3 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -358,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -418,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -480,7 +505,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.iosproject.partyRules;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Picolal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.iosproject.partyRules;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Picolal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
