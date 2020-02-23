@@ -145,26 +145,31 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         let db:DBHelper = DBHelper()
         let users : [User] = db.readAll()
-        
+
         let newName = inputName.text
         let newMail = inputEmail.text
         let oldName = users[0].name
         let oldMail = users[0].email
         let userId = users[0].id
-        
+
         if (newName == "" && newMail == "") {
             let alert = UIAlertController(title: "Error", message: "Please enter new name or email.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
             self.present(alert, animated: true)
         } else {
             if (newName != oldName || newMail != oldMail) {
-                db.deleteByID(id: userId)
-                db.insert(id: userId, name: newName!, mail: newMail!)
-                let alert = UIAlertController(title: "Success", message: "Successfully updated.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-                self.present(alert, animated: true)
-                inputName.text = newName
-                inputEmail.text = newMail
+                let newAuthor = Author(name: newName!, email: newMail!)
+                self.authorWebService.updateAuthor(authorId: userId, author: newAuthor) { (authors) in
+                    db.deleteByID(id: userId)
+                    db.insert(id: userId, name: newName!, mail: newMail!)
+                    DispatchQueue.main.async { [weak self] in
+                        self!.inputName.text = newName
+                        self!.inputEmail.text = newMail
+                        let alert = UIAlertController(title: "Success", message: "Successfully updated.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                        self!.present(alert, animated: true)
+                    }
+                }
             }
         }
     }

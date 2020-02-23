@@ -11,6 +11,7 @@ import UIKit
 class RulesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var authorWebService: AuthorWebService = AuthorWebService()
     var categoryWebService: CategoryWebService = CategoryWebService()
+    var ruleWebService: RuleWebService = RuleWebService()
     var rules:[Rule]!
     
     enum Identifier: String {
@@ -88,8 +89,16 @@ class RulesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let rule = self.rules[indexPath.section]
-        //let ruleDetails = RuleDetailsViewController.newInstance(rule: rule)
-        //self.navigationController?.pushViewController(ruleDetails, animated: true)
+        let alert = UIAlertController(title: "Delete ?", message: "Are you sure ? This is irreversible.", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
+            let indexPath_tmp = IndexPath(item: 0, section: indexPath.section)
+            //self.rulesTableView.deleteRows(at: [indexPath_tmp], with: .fade)
+            self.ruleWebService.deleteRule(ruleId: rule.id!, completion: { rule in
+                //self.rules.remove(at: indexPath.section)
+            })
+        }))
+        self.present(alert, animated: true)
     }
     
     func sortRulesByName(){

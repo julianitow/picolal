@@ -76,4 +76,10 @@ class GalleryViewController: UIViewController {
             self.categories = categories
         }
     }
+    
+    @IBAction func creditsAction(_ sender: Any) {
+        let alert = UIAlertController(title: "Developers", message: "Developed with ❤️ By Julien GUILLAN, Henri GOURGUE and Salayna DOUKOURE.", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Thank you !", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 }

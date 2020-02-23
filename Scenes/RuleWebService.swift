@@ -143,4 +143,23 @@ class RuleWebService {
         })
         task.resume()
     }
+    
+    func deleteRule(ruleId: Int, completion: @escaping(Bool) -> Void){
+        guard let ruleURL:URL = URL(string: "http://lil-nas.ddns.net:8080/api/rule/" + String(ruleId)) else {
+            return
+        }
+        var request = URLRequest(url: ruleURL)
+        request.httpMethod = "DELETE"
+
+        let session = URLSession.shared
+
+        let task = session.dataTask(with: request) {
+          (data, response, error) in
+          guard let _ = data else {
+            print(error as Any)
+            return
+          }
+        }
+        task.resume()
+    }
 }
