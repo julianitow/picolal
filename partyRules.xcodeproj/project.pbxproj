@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177E007B2401AA3500138A6C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E007A2401AA3500138A6C /* DBHelper.swift */; };
+		177E00812401B50C00138A6C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177E007F2401B50C00138A6C /* RegisterViewController.swift */; };
+		177E00822401B50C00138A6C /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 177E00802401B50C00138A6C /* RegisterViewController.xib */; };
 		4D20DA4B23D09F0B00216C42 /* GalleryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */; };
 		4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D3AABD12401886F002EABD3 /* assets.xcassets */; };
 		4D444B3E23FDBCA8003FFFEE /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */; };
@@ -46,6 +49,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177E007A2401AA3500138A6C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		177E007F2401B50C00138A6C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		177E00802401B50C00138A6C /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		4D20DA4A23D09F0B00216C42 /* GalleryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GalleryViewController.xib; sourceTree = "<group>"; };
 		4D3AABD12401886F002EABD3 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		4D444B3C23FDBCA8003FFFEE /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		177E007C2401B39400138A6C /* User */ = {
+			isa = PBXGroup;
+			children = (
+				177E007F2401B50C00138A6C /* RegisterViewController.swift */,
+				177E00802401B50C00138A6C /* RegisterViewController.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		4D0B832223DDEE4300486773 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				4D89288E23EEFDE400E73AE9 /* Database.swift */,
+				177E007A2401AA3500138A6C /* DBHelper.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -174,6 +190,7 @@
 		4DB0FB8E23C23B7E0043E6E8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				177E007C2401B39400138A6C /* User */,
 				4D444B3B23FDBC87003FFFEE /* Game */,
 				4D0B832223DDEE4300486773 /* List */,
 				4D7CC94023EC9CBD00423793 /* RuleDetailsViewController.swift */,
@@ -272,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D89288C23EEFC7B00E73AE9 /* myAccountViewController.xib in Resources */,
+				177E00822401B50C00138A6C /* RegisterViewController.xib in Resources */,
 				4DB0FB8723C23B260043E6E8 /* LaunchScreen.storyboard in Resources */,
 				4D3AABD22401886F002EABD3 /* assets.xcassets in Resources */,
 				4D444B4323FF06E6003FFFEE /* CategorySelectionViewController.xib in Resources */,
@@ -310,11 +328,13 @@
 				4DFF0CA923CB9A6D00FA6963 /* RuleFactory.swift in Sources */,
 				4D89288B23EEFC7B00E73AE9 /* myAccountViewController.swift in Sources */,
 				4DB0FB9623C23C6A0043E6E8 /* Author.swift in Sources */,
+				177E007B2401AA3500138A6C /* DBHelper.swift in Sources */,
 				4D7CC93623EC4C0000423793 /* RuleTableViewCell.swift in Sources */,
 				4D89288F23EEFDE400E73AE9 /* Database.swift in Sources */,
 				A57091E223FEE61E008A8598 /* RateWebService.swift in Sources */,
 				4D89289123EEFE9900E73AE9 /* User.swift in Sources */,
 				4D7CC93B23EC808100423793 /* AuthorFactory.swift in Sources */,
+				177E00812401B50C00138A6C /* RegisterViewController.swift in Sources */,
 				4DB0FB9A23C2406E0043E6E8 /* RuleWebService.swift in Sources */,
 				4DB0FB9823C23C750043E6E8 /* Category.swift in Sources */,
 			);

@@ -23,6 +23,8 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        rotatePortrait()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,7 +62,7 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
         cell.nameLabel.text = category.name
         cell.descriptionLabel.text = category.description
         
-        cell.layer.cornerRadius = 5
+        cell.layer.cornerRadius = 10
         
         return cell
     }
@@ -70,6 +72,17 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
         let ruleDetails = RuleDetailsViewController.newInstance(players: self.players, category: category.name)
         self.navigationController?.pushViewController(ruleDetails, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let spacing: CGFloat = 5
+        return spacing
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+       }
     
     /*func getCategories(){
         self.categoryWebService.getCategories { (rules) in
@@ -90,5 +103,25 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func rotatePortrait(){
+        var statusBarOrientation: UIInterfaceOrientation? {
+            get {
+                guard let orientation = UIApplication.shared.windows.first?.windowScene?.interfaceOrientation else {
+                    #if DEBUG
+                    fatalError("Could not obtain UIInterfaceOrientation from a valid windowScene")
+                    #else
+                    return nil
+                    #endif
+                }
+                return orientation
+            }
+        }
+        
+        if statusBarOrientation!.isLandscape{
+            let portrait = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
+    }
 
 }
