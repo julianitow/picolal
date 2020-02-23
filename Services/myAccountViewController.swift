@@ -20,7 +20,7 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     var pickerDrinksData: [String] = [String]()
     var pickerCategoriesData: [String] = [String]()
-    
+    var keyboardVisible = false
     
     let database : Database = Database()
     let ruleWebService : RuleWebService = RuleWebService()
@@ -42,10 +42,21 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
             self.pickerCategoriesData.append(category.name)
         }
         
-        
-        
-
+        let textFields = self.getAllTextFields(fromView: self.view)
+        textFields.forEach({(textField) in
+            textField.delegate = self
+        })
         // Do any additional setup after loading the view.
+    }
+    
+    func getAllTextFields(fromView view: UIView)-> [UITextField] {
+        return view.subviews.compactMap { (view) -> [UITextField]? in
+            if view is UITextField {
+                return [(view as! UITextField)]
+            } else {
+                return getAllTextFields(fromView: view)
+            }
+        }.flatMap({$0})
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,6 +66,13 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if self.keyboardVisible == true {
+            self.view.endEditing(true) // close all user interaction
+            self.keyboardVisible = false
+        }
     }
     
     // The number of rows of data
@@ -199,4 +217,17 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
     }
     
+}
+
+extension myAccountViewController: UITextFieldDelegate {
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.keyboardVisible = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.keyboardVisible = false
+        return false
+    }
 }
