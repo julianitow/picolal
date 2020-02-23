@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="WorkSans-Bold.ttf">
+            <string>WorkSans-Bold</string>
+        </array>
         <array key="WorkSans-Light.ttf">
             <string>WorkSans-Light</string>
         </array>
@@ -14,40 +17,39 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="KGk-i7-Jjw" customClass="CategoryTableViewCell" customModule="partyRules" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" translatesAutoresizingMaskIntoConstraints="NO" id="KGk-i7-Jjw" customClass="CategoryTableViewCell" customModule="partyRules" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="346" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-15-4Hh">
-                        <rect key="frame" x="10" y="10.5" width="55.5" height="23.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQg-15-4Hh">
+                        <rect key="frame" x="131.5" y="15" width="57" height="23.5"/>
+                        <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkA-Hq-sng">
+                        <rect key="frame" x="107" y="63" width="106.5" height="24"/>
                         <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AkA-Hq-sng">
-                        <rect key="frame" x="108" y="12" width="228" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
-                <color key="backgroundColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="qQg-15-4Hh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rc5-nH-7qL"/>
-                    <constraint firstItem="qQg-15-4Hh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YKB-hx-3yh"/>
-                    <constraint firstItem="AkA-Hq-sng" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="n5S-GF-n0C"/>
-                    <constraint firstAttribute="trailing" secondItem="AkA-Hq-sng" secondAttribute="trailing" constant="10" id="o0O-cC-iWT"/>
+                    <constraint firstItem="AkA-Hq-sng" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7QX-Mx-EZ0"/>
+                    <constraint firstItem="qQg-15-4Hh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LIa-GN-0Aq"/>
+                    <constraint firstItem="qQg-15-4Hh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="QL2-IT-ZUB"/>
+                    <constraint firstItem="AkA-Hq-sng" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RSt-L5-r9W"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="descriptionLabel" destination="AkA-Hq-sng" id="86n-FM-Yuu"/>
                 <outlet property="nameLabel" destination="qQg-15-4Hh" id="8KR-cB-fhl"/>
             </connections>
-            <point key="canvasLocation" x="113.04347826086958" y="124.55357142857142"/>
+            <point key="canvasLocation" x="-172.46376811594203" y="-42.1875"/>
         </tableViewCell>
     </objects>
 </document>

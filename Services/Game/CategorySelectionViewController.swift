@@ -62,7 +62,7 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
         cell.nameLabel.text = category.name
         cell.descriptionLabel.text = category.description
         
-        cell.layer.cornerRadius = 5
+        cell.layer.cornerRadius = 10
         
         return cell
     }
@@ -72,6 +72,17 @@ class CategorySelectionViewController: UIViewController, UITableViewDataSource, 
         let ruleDetails = RuleDetailsViewController.newInstance(players: self.players, category: category.name)
         self.navigationController?.pushViewController(ruleDetails, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let spacing: CGFloat = 5
+        return spacing
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+           let headerView = UIView()
+           headerView.backgroundColor = UIColor.clear
+           return headerView
+       }
     
     /*func getCategories(){
         self.categoryWebService.getCategories { (rules) in

@@ -29,7 +29,7 @@
                     <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-0Z-ATa">
+                <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fVw-0Z-ATa">
                     <rect key="frame" x="30" y="154" width="354" height="588"/>
                     <color key="backgroundColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
