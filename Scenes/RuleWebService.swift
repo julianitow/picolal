@@ -112,4 +112,35 @@ class RuleWebService {
         }
         task.resume()
     }
+    
+    func getRulesByAuthorId(authorId: Int, completion: @escaping ([Rule]) -> Void) -> Void {
+        print("ici")
+        print(String(authorId))
+        guard let rulesURL = URL(string: "http://lil-nas.ddns.net:8080/api/author/" + String(authorId) + "/rules") else {
+            return;
+        }
+        print(rulesURL)
+        let task = URLSession.shared.dataTask(with: rulesURL, completionHandler: { (data: Data?, res, err) in
+            guard let bytes = data,
+                  err == nil,
+                  let json = try? JSONSerialization.jsonObject(with: bytes, options: .allowFragments) as? [Any] else {
+                    DispatchQueue.main.sync {
+                        completion([])
+                    }
+                return
+            }
+            let rules = json.compactMap { (obj) -> Rule? in
+                guard let dict = obj as? [String: Any] else {
+                    return nil
+                }
+                return RuleFactory.ruleFrom(dictionnary: dict)
+            }
+            print("ici")
+            print(rules)
+            DispatchQueue.main.sync {
+                completion(rules)
+            }
+        })
+        task.resume()
+    }
 }

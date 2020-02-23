@@ -48,14 +48,12 @@ class RegisterViewController: UIViewController {
                 self.authorWebService.createAuthor(author: authorApi){(response) in
                     if !response{
                         //N'a pas fonctionne
-                        print(response)
+                        print("Impossible de creer un nouvel utilisateur.")
                     }
                     else {
                         //A fonctionne
                         db.insert(id: author.id!+1, name: name!, mail: email!)
-                        let mavc = myAccountViewController.newInstance()
-                        self.navigationController?.pushViewController(mavc, animated: true)
-                        //db.insert(id: author.id, name: name, mail: email)
+                        self.navigationController?.popToRootViewController(animated: true)
                     }
                 }
             }

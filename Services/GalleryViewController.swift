@@ -12,12 +12,14 @@ class GalleryViewController: UIViewController {
     
     let ruleWebService: RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
+    var categoryWebService: CategoryWebService = CategoryWebService()
     let database: Database = Database()
+    var categories: [Category]!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
+        self.getCategories()
         rotatePortrait()
     }
 
@@ -39,12 +41,8 @@ class GalleryViewController: UIViewController {
     }*/
     
     @IBAction func myAccountAction(_ sender: Any) {
-        authorWebService.getAuthor(id: 1) { (Author) in
-            
-            let myAccountPage = myAccountViewController.newInstance()
+            let myAccountPage = myAccountViewController.newInstance(categories: self.categories)
             self.navigationController?.pushViewController(myAccountPage, animated: true)
-            
-        }
     }
     
     func rotatePortrait(){
@@ -64,6 +62,12 @@ class GalleryViewController: UIViewController {
         if statusBarOrientation!.isLandscape{
             let portrait = UIInterfaceOrientation.portrait.rawValue
             UIDevice.current.setValue(portrait, forKey: "orientation")
+        }
+    }
+    
+    func getCategories() {
+        self.categoryWebService.getAllCategories { (categories) in
+            self.categories = categories
         }
     }
 }
