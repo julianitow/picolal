@@ -51,14 +51,19 @@ class RegisterViewController: UIViewController {
                     else {
                         //A fonctionne
                         db.insert(id: author.id!+1, name: name!, mail: email!)
-                        db.deleteByID(id: author.id!+1)
-                        let mavc = myAccountViewController.newInstance()
-                        self.navigationController?.pushViewController(mavc, animated: true)
+                        DispatchQueue.main.async {
+                            self.changeView()
+                        }
                         //db.insert(id: author.id, name: name, mail: email)
                     }
                 }
             }
         }
+    }
+    
+    func changeView(){
+        let mavc = myAccountViewController.newInstance()
+        self.navigationController?.pushViewController(mavc, animated: true)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
