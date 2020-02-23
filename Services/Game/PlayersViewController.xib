@@ -32,22 +32,61 @@
                     <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-X3-JHb">
-                    <rect key="frame" x="106" y="208" width="203" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kky-X3-JHb">
+                    <rect key="frame" x="107" y="172" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="B2i-3f-5ND"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-aT-z2x">
-                    <rect key="frame" x="106" y="261" width="203" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-aT-z2x">
+                    <rect key="frame" x="107" y="241" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="cTc-wQ-Xpc"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-UQ-e1W">
-                    <rect key="frame" x="131" y="429" width="151" height="38"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-hA-RRa">
+                    <rect key="frame" x="107" y="310" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="3qj-Jk-nme"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJE-Bo-qFJ">
+                    <rect key="frame" x="107" y="379" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="LOB-nR-StC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-UY-Py6">
+                    <rect key="frame" x="107" y="448" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="ldP-pG-IzF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YDM-pX-NHn">
+                    <rect key="frame" x="107" y="517" width="200" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="xjM-vK-hhX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKw-UQ-e1W">
+                    <rect key="frame" x="107" y="702" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Arw-pY-E3M"/>
+                        <constraint firstAttribute="width" constant="200" id="yWd-KU-51K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="40"/>
                     <state key="normal" title="Play" backgroundImage="button_bg">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="titleShadowColor" red="0.098039215690000001" green="0.46274509800000002" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,17 +95,26 @@
                         <action selector="playAction:" destination="-1" eventType="touchUpInside" id="rs2-8S-ibv"/>
                     </connections>
                 </button>
-                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U4U-hA-RRa">
-                    <rect key="frame" x="106" y="312" width="203" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="WorkSans-Light" family="Work Sans" pointSize="35"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
             </subviews>
             <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="i9h-E5-TPn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3CE-fA-n0Q"/>
+                <constraint firstItem="ZJE-Bo-qFJ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Y8-Tz-5up"/>
+                <constraint firstItem="tKw-UQ-e1W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="A85-6H-eQl"/>
+                <constraint firstItem="5bb-UY-Py6" firstAttribute="top" secondItem="ZJE-Bo-qFJ" secondAttribute="bottom" constant="20" id="BFk-59-Igg"/>
+                <constraint firstItem="YDM-pX-NHn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Bvt-mA-1gE"/>
+                <constraint firstItem="Kky-X3-JHb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GJx-fi-ERb"/>
                 <constraint firstItem="i9h-E5-TPn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="LMk-ec-cmr"/>
+                <constraint firstItem="hM2-aT-z2x" firstAttribute="top" secondItem="Kky-X3-JHb" secondAttribute="bottom" constant="20" id="Oii-9f-HWN"/>
+                <constraint firstItem="U4U-hA-RRa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PPb-q1-azQ"/>
+                <constraint firstItem="tKw-UQ-e1W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="RS8-7t-IyM"/>
+                <constraint firstItem="hM2-aT-z2x" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="bcP-2g-d8a"/>
+                <constraint firstItem="YDM-pX-NHn" firstAttribute="top" secondItem="5bb-UY-Py6" secondAttribute="bottom" constant="20" id="gtf-aX-io2"/>
+                <constraint firstItem="Kky-X3-JHb" firstAttribute="top" secondItem="i9h-E5-TPn" secondAttribute="bottom" constant="40" id="jA6-aj-3iy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tKw-UQ-e1W" secondAttribute="bottom" constant="110" id="koQ-Yt-7hZ"/>
+                <constraint firstItem="U4U-hA-RRa" firstAttribute="top" secondItem="hM2-aT-z2x" secondAttribute="bottom" constant="20" id="pGv-Eo-p5l"/>
+                <constraint firstItem="5bb-UY-Py6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rOb-7M-e8f"/>
+                <constraint firstItem="ZJE-Bo-qFJ" firstAttribute="top" secondItem="U4U-hA-RRa" secondAttribute="bottom" constant="20" id="x0x-NS-ct9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="124.55357142857142"/>

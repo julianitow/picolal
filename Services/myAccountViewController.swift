@@ -84,10 +84,7 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
         rotatePortrait()
         
         let db:DBHelper = DBHelper()
-        //db.insert(id: 1, name: "John", mail: "Doe@doe.com")
-        //db.deleteByID(id: 8)
         let users : [User] = db.readAll()
-        
         if users.isEmpty {
             //Pas d'utilisateur créé, retour vers la page register/login
             let rvc = RegisterViewController.newInstance()
