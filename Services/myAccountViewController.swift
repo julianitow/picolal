@@ -217,6 +217,12 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
     }
     
+    @IBAction func logoutAction(_ sender: Any) {
+        let db:DBHelper = DBHelper()
+        let users : [User] = db.readAll()
+        db.deleteByID(id: users[0].id)
+        self.navigationController?.popViewController(animated: true)
+    }
 }
 
 extension myAccountViewController: UITextFieldDelegate {

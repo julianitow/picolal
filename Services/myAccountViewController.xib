@@ -131,6 +131,13 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W67-ZY-U0K">
+                    <rect key="frame" x="157" y="627" width="100" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="cD8-md-Awz"/>
+                        <constraint firstAttribute="height" constant="45" id="su6-qh-gpT"/>
+                    </constraints>
+                </pickerView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinks :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-4a-zwV">
                     <rect key="frame" x="10" y="575" width="75" height="45"/>
                     <constraints>
@@ -140,13 +147,17 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W67-ZY-U0K">
-                    <rect key="frame" x="157" y="627" width="100" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="100" id="cD8-md-Awz"/>
-                        <constraint firstAttribute="height" constant="45" id="su6-qh-gpT"/>
-                    </constraints>
-                </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR8-il-sJz">
+                    <rect key="frame" x="370" y="69" width="23" height="23"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" image="person.badge.minus" catalog="system">
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="logoutAction:" destination="-1" eventType="touchUpInside" id="09q-vM-EiL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.82352941176470584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -184,5 +195,6 @@
     </objects>
     <resources>
         <image name="button_bg" width="1110" height="237"/>
+        <image name="person.badge.minus" catalog="system" width="64" height="58"/>
     </resources>
 </document>
