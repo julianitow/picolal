@@ -51,6 +51,7 @@ class RegisterViewController: UIViewController {
                     else {
                         //A fonctionne
                         db.insert(id: author.id!+1, name: name!, mail: email!)
+                        db.deleteByID(id: author.id!+1)
                         let mavc = myAccountViewController.newInstance()
                         self.navigationController?.pushViewController(mavc, animated: true)
                         //db.insert(id: author.id, name: name, mail: email)

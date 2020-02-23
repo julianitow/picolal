@@ -17,7 +17,12 @@ class GalleryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
+        let alert = UIAlertController(title: "Warning !", message: "Please drink responsibly, we're not responsible of any kind of incudent due to overconsomation of alcohol. Have a nice play with our app anyway :)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Of course", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "I don't agree", style: .destructive, handler: { (action) in
+            UIControl().sendAction(#selector(NSXPCConnection.), to: UIApplication.shared, for: nil)
+        }))
+        self.present(alert, animated: true)
         rotatePortrait()
     }
 
@@ -39,12 +44,8 @@ class GalleryViewController: UIViewController {
     }*/
     
     @IBAction func myAccountAction(_ sender: Any) {
-        authorWebService.getAuthor(id: 1) { (Author) in
-            
-            let myAccountPage = myAccountViewController.newInstance()
-            self.navigationController?.pushViewController(myAccountPage, animated: true)
-            
-        }
+        let myAccountPage = myAccountViewController.newInstance()
+        self.navigationController?.pushViewController(myAccountPage, animated: true)
     }
     
     func rotatePortrait(){
