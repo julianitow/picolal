@@ -31,7 +31,7 @@ class myAccountViewController: UIViewController, UIPickerViewDataSource, UIPicke
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.interactivePopGestureRecognizer?.delegate = nil
         drinksPicker.delegate = self
         drinksPicker.dataSource = self
         self.pickerDrinksData = ["1", "2", "3", "4", "5"]
