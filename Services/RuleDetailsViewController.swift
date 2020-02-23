@@ -23,6 +23,7 @@ class RuleDetailsViewController: UIViewController {
     @IBOutlet var drinksLabel: UILabel!
     @IBOutlet var drinksStackView: UIStackView!
     @IBOutlet var rateStackView: UIStackView!
+    @IBOutlet var nextButton: UIButton!
     
     let ruleWebService: RuleWebService = RuleWebService()
     let authorWebService: AuthorWebService = AuthorWebService()
@@ -154,6 +155,7 @@ class RuleDetailsViewController: UIViewController {
         else if self.playerLabel.text == "Finished" {
             self.navigationController?.popToRootViewController(animated: true)
         } else {
+            self.nextButton.removeFromSuperview()
             self.authorLabel.text = ""
             self.nameLabel.text = ""
             self.contentLabel.text = ""
@@ -165,14 +167,18 @@ class RuleDetailsViewController: UIViewController {
     }
 
     @IBAction func quitAction(_ sender: Any) {
-        let alert = UIAlertController(title: "Already drunk ?", message: "Are you sure you want to leave ? ", preferredStyle: .actionSheet)
-
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+        if(self.playerLabel.text == "Finished"){
             self.navigationController?.popToRootViewController(animated: true)
-        }))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        } else {
+            let alert = UIAlertController(title: "Already drunk ?", message: "Are you sure you want to leave ? ", preferredStyle: .actionSheet)
 
-        self.present(alert, animated: true)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
+                self.navigationController?.popToRootViewController(animated: true)
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+
+            self.present(alert, animated: true)
+        }
     }
     
     func breakString(string: String) -> String{

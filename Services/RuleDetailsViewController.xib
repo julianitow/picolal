@@ -22,6 +22,7 @@
                 <outlet property="drinksLabel" destination="WcD-SC-hyD" id="JU4-Gw-Lyy"/>
                 <outlet property="drinksStackView" destination="17g-9M-guQ" id="IdK-Nr-IC2"/>
                 <outlet property="nameLabel" destination="Ofi-m6-kXf" id="DPT-Nj-sv1"/>
+                <outlet property="nextButton" destination="nyc-VZ-iQo" id="Pea-bL-94u"/>
                 <outlet property="playerLabel" destination="SkK-WC-ZmW" id="eWI-jj-p7d"/>
                 <outlet property="rateStackView" destination="9rN-iQ-Lzc" id="une-FT-441"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
