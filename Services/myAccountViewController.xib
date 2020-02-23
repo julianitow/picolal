@@ -32,7 +32,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyAccount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fn2-FA-nlz">
-                    <rect key="frame" x="83" y="54" width="248" height="53"/>
+                    <rect key="frame" x="92.5" y="54" width="229.5" height="53"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="45"/>
                     <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -82,7 +82,7 @@
                     <textInputTraits key="textInputTraits" textContentType="email"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AW5-7d-w5h">
-                    <rect key="frame" x="132" y="317" width="150" height="40.000000000000057"/>
+                    <rect key="frame" x="132" y="317" width="150" height="40"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="150" id="LqK-od-KB3"/>
                         <constraint firstAttribute="height" constant="40" id="uun-Dc-z1i"/>
@@ -96,7 +96,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create rule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oV-c4-ht0">
-                    <rect key="frame" x="97" y="367" width="220.5" height="47"/>
+                    <rect key="frame" x="109" y="367" width="196" height="47"/>
                     <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="40"/>
                     <color key="textColor" red="0.99215686270000003" green="0.84705882349999995" blue="0.20784313730000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drinks :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-4a-zwV">
-                    <rect key="frame" x="10" y="575" width="77" height="45"/>
+                    <rect key="frame" x="10" y="575" width="75" height="45"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="YGK-rf-9f0"/>
                     </constraints>

@@ -74,7 +74,7 @@
 		4D89288A23EEFC7B00E73AE9 /* myAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = myAccountViewController.xib; sourceTree = "<group>"; };
 		4D89288E23EEFDE400E73AE9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		4D89289023EEFE9900E73AE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		4DB0FB7723C23B250043E6E8 /* partyRules.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = partyRules.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB0FB7723C23B250043E6E8 /* Picolal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DB0FB7A23C23B250043E6E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DB0FB7C23C23B250043E6E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4DB0FB8623C23B260043E6E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		4DB0FB7823C23B250043E6E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DB0FB7723C23B250043E6E8 /* partyRules.app */,
+				4DB0FB7723C23B250043E6E8 /* Picolal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,7 +247,7 @@
 			);
 			name = partyRules;
 			productName = partyRules;
-			productReference = 4DB0FB7723C23B250043E6E8 /* partyRules.app */;
+			productReference = 4DB0FB7723C23B250043E6E8 /* Picolal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -480,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.iosproject.partyRules;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Picolal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +498,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.iosproject.partyRules;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Picolal;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
