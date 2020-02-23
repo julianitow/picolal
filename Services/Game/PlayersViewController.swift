@@ -44,17 +44,28 @@ class PlayersViewController: UIViewController {
 
     @IBAction func playAction(_ sender: Any) {
         let textFields = getAllTextFields(fromView: self.view)
+        var nbPlayers = 0
         var players: [String] = []
         textFields.forEach({ (textField) in
             if(textField.text!.count > 0){
+                nbPlayers += 1
                 players.append(textField.text!)
             }
         })
-        print(players)
-        //let rdvc = RuleDetailsViewController.newInstance(players: players)
-        let csvc = CategorySelectionViewController.newInstance(players: players, categories: self.categories)
-        
-        navigationController?.pushViewController(csvc, animated: true)
+        if(nbPlayers == 0){
+            self.alert(title: "Is there anybody ?", message: "You obvisously can't play without any player ;)", action: "Oups sorry !")
+        } else if(nbPlayers == 1){
+            self.alert(title: "No friends ? ", message: "There is no PMU mode yet. :/", action: "Oh Damn !")
+        } else {
+            let csvc = CategorySelectionViewController.newInstance(players: players, categories: self.categories)
+            navigationController?.pushViewController(csvc, animated: true)
+        }
+    }
+    
+    func alert(title: String, message: String, action: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: action, style: .default, handler: nil))
+        self.present(alert, animated: true)
     }
     
     func getAllTextFields(fromView view: UIView)-> [UITextField] {
