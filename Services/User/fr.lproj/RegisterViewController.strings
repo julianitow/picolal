@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "95B-3G-tMT"; */
+"95B-3G-tMT.normalTitle" = "Connexion";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "JPy-6l-N5B"; */
+"JPy-6l-N5B.normalTitle" = "Inscription";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "NeJ-MA-ZfP"; */
+"NeJ-MA-ZfP.text" = "Inscription";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "WF0-Lj-CrY"; */
+"WF0-Lj-CrY.placeholder" = "Username";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "WFQ-ok-AaS"; */
+"WFQ-ok-AaS.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "m7N-Wl-kHf"; */
+"m7N-Wl-kHf.placeholder" = "Email";
